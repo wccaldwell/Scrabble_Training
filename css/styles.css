@@ -403,7 +403,6 @@ form#name-form {
   background: #fbecec;
   color: var(--incorrect);
   border: 1px solid #eac7c7;
-  text-decoration: line-through;
 }
 
 /* Leaderboard */
