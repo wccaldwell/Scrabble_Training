@@ -32,20 +32,21 @@ async function init() {
 
   renderWeekHeader(weekKey, week);
 
-  // Already submitted on this device?
   const puzzleKey = `weekly:${weekKey}`;
+
+  // Same-device block — definitely this user.
   if (hasSubmittedWeek(weekKey)) {
-    $("#already-submitted").classList.remove("hidden");
+    showAlreadySubmitted({ fromSheet: false });
     await showLeaderboard(puzzleKey);
     return;
   }
 
-  // Server-side double-check: name already in the sheet for this week?
+  // Cross-device block — we only know "someone with this name" submitted.
+  // Do NOT write a localStorage flag here, so a rename + reload clears it.
   try {
     const rows = await fetchRows();
     if (rows && hasNameSubmitted(rows, puzzleKey, getName())) {
-      markSubmittedWeek(weekKey, { recoveredFromSheet: true });
-      $("#already-submitted").classList.remove("hidden");
+      showAlreadySubmitted({ fromSheet: true });
       await showLeaderboard(puzzleKey);
       return;
     }
@@ -97,6 +98,31 @@ function pickCurrentWeek(weekly) {
 function todayISO() {
   const d = new Date();
   return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+}
+
+function showAlreadySubmitted({ fromSheet }) {
+  const title = $("#already-submitted-title");
+  const body = $("#already-submitted-body");
+  const rename = $("#already-submitted-rename");
+  const name = getName();
+  if (fromSheet) {
+    title.textContent = `Someone named “${name}” already submitted this week`;
+    body.textContent =
+      `If that wasn't you, another club member shares your name. Change your name (add a last initial, for example) and you'll be able to play.`;
+    rename.classList.remove("hidden");
+    rename.onclick = () => {
+      const next = prompt("Your name:", name);
+      if (next && next.trim() && next.trim() !== name) {
+        setName(next.trim());
+        location.reload();
+      }
+    };
+  } else {
+    title.textContent = "You've already played this week";
+    body.textContent = "Come back next week for a new puzzle. Leaderboard below.";
+    rename.classList.add("hidden");
+  }
+  $("#already-submitted").classList.remove("hidden");
 }
 
 function renderWeekHeader(weekKey, week) {
