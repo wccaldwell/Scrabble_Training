@@ -32,85 +32,327 @@
     }
   },
   "permanent": {
-    "two-letter-words-sample": {
+    "2-4-qwords": {
       "type": "recall",
-      "title": "2-letter words starting with A (sample)",
-      "description": "Short warm-up list. Full 2-letter list can replace this once you're ready.",
+      "title": "2- to 4-Letter Q Words",
       "answers": [
-        "AA",
-        "AB",
-        "AD",
-        "AE",
-        "AG",
-        "AH",
-        "AI",
-        "AL",
-        "AM",
-        "AN",
-        "AR",
-        "AS",
-        "AT",
-        "AW",
-        "AX",
-        "AY"
+        "AQUA",
+        "CINQ",
+        "QADI",
+        "QAID",
+        "QAT",
+        "QATS",
+        "QI",
+        "QIS",
+        "QOPH",
+        "QUA",
+        "QUAD",
+        "QUAG",
+        "QUAI",
+        "QUAY",
+        "QUEY",
+        "QUID",
+        "QUIN",
+        "QUIP",
+        "QUIT",
+        "QUIZ",
+        "QUOD",
+        "SUQ",
+        "SUQS"
       ],
       "missPenaltySeconds": 5
     },
-    "hooks-3-letter-sample": {
-      "type": "hooks",
-      "title": "Front + back hooks on common 3-letter words (sample)",
-      "puzzles": [
-        {
-          "word": "EAR",
-          "front": [
-            "B",
-            "D",
-            "F",
-            "G",
-            "H",
-            "L",
-            "N",
-            "P",
-            "R",
-            "S",
-            "T",
-            "W",
-            "Y"
-          ],
-          "back": [
-            "L",
-            "N",
-            "S"
-          ]
-        },
-        {
-          "word": "CAT",
-          "front": [
-            "S"
-          ],
-          "back": [
-            "E",
-            "S"
-          ]
-        },
-        {
-          "word": "OAR",
-          "front": [
-            "B",
-            "R",
-            "S"
-          ],
-          "back": [
-            "S"
-          ]
-        }
-      ]
+    "2-4-zwords": {
+      "type": "recall",
+      "title": "2- to 4-Letter Z Words",
+      "answers": [
+        "ADZ",
+        "ADZE",
+        "AZAN",
+        "AZO",
+        "AZON",
+        "BAZZ",
+        "BIZ",
+        "BIZE",
+        "BOZO",
+        "BUZZ",
+        "CAZH",
+        "CHEZ",
+        "COZ",
+        "COZY",
+        "CUZ",
+        "CZAR",
+        "DAZE",
+        "DITZ",
+        "DOZE",
+        "DOZY",
+        "FAZE",
+        "FEZ",
+        "FIZ",
+        "FIZZ",
+        "FOZY",
+        "FRIZ",
+        "FUTZ",
+        "FUZE",
+        "FUZZ",
+        "GAZE",
+        "GEEZ",
+        "GRIZ",
+        "HAZE",
+        "HAZY",
+        "IZAR",
+        "JAZZ",
+        "JEEZ",
+        "JIZZ",
+        "LAZE",
+        "LAZY",
+        "LUTZ",
+        "MAZE",
+        "MAZY",
+        "MEZE",
+        "MOZO",
+        "NAZI",
+        "OOZE",
+        "OOZY",
+        "ORZO",
+        "OUZO",
+        "OYEZ",
+        "PHIZ",
+        "PREZ",
+        "PUTZ",
+        "QUIZ",
+        "RAZE",
+        "RAZZ",
+        "REZ",
+        "RITZ",
+        "SEZ",
+        "SIZE",
+        "SIZY",
+        "SPAZ",
+        "TIZ",
+        "TIZZ",
+        "TZAR",
+        "WHIZ",
+        "WIZ",
+        "WUZ",
+        "YEZ",
+        "YUTZ",
+        "YUZU",
+        "ZA",
+        "ZAG",
+        "ZAGS",
+        "ZANY",
+        "ZAP",
+        "ZAPS",
+        "ZARF",
+        "ZAS",
+        "ZAX",
+        "ZEAL",
+        "ZEBU",
+        "ZED",
+        "ZEDA",
+        "ZEDS",
+        "ZEE",
+        "ZEES",
+        "ZEIN",
+        "ZEK",
+        "ZEKS",
+        "ZEN",
+        "ZENS",
+        "ZEP",
+        "ZEPS",
+        "ZERK",
+        "ZERO",
+        "ZEST",
+        "ZETA",
+        "ZIG",
+        "ZIGS",
+        "ZILL",
+        "ZIN",
+        "ZINC",
+        "ZINE",
+        "ZING",
+        "ZINS",
+        "ZIP",
+        "ZIPS",
+        "ZIT",
+        "ZITI",
+        "ZITS",
+        "ZIZZ",
+        "ZOA",
+        "ZOEA",
+        "ZOIC",
+        "ZONA",
+        "ZONE",
+        "ZONK",
+        "ZOO",
+        "ZOOM",
+        "ZOON",
+        "ZOOS",
+        "ZORI",
+        "ZOUK",
+        "ZUKE",
+        "ZUZ",
+        "ZYME",
+        "ZZZ"
+      ],
+      "missPenaltySeconds": 5
     },
-    "bingo-stems-tisane": {
+    "2-4-jwords": {
+      "type": "recall",
+      "title": "2- to 4-Letter J Words",
+      "answers": [
+        "AJAR",
+        "AJEE",
+        "AJI",
+        "AJIS",
+        "DJIN",
+        "DOJO",
+        "FUJI",
+        "GOJI",
+        "HADJ",
+        "HAJ",
+        "HAJI",
+        "HAJJ",
+        "JAB",
+        "JABS",
+        "JACK",
+        "JADE",
+        "JAG",
+        "JAGG",
+        "JAGS",
+        "JAIL",
+        "JAKE",
+        "JAM",
+        "JAMB",
+        "JAMS",
+        "JANE",
+        "JAPE",
+        "JAR",
+        "JARL",
+        "JARS",
+        "JATO",
+        "JAUK",
+        "JAUP",
+        "JAVA",
+        "JAW",
+        "JAWS",
+        "JAY",
+        "JAYS",
+        "JAZZ",
+        "JEAN",
+        "JEDI",
+        "JEE",
+        "JEED",
+        "JEEP",
+        "JEER",
+        "JEES",
+        "JEEZ",
+        "JEFE",
+        "JEHU",
+        "JELL",
+        "JEON",
+        "JERK",
+        "JESS",
+        "JEST",
+        "JET",
+        "JETE",
+        "JETS",
+        "JEU",
+        "JEUX",
+        "JIAO",
+        "JIB",
+        "JIBB",
+        "JIBE",
+        "JIBS",
+        "JIFF",
+        "JIG",
+        "JIGS",
+        "JILL",
+        "JILT",
+        "JIMP",
+        "JIN",
+        "JINK",
+        "JINN",
+        "JINS",
+        "JINX",
+        "JIRD",
+        "JISM",
+        "JIVE",
+        "JIVY",
+        "JIZZ",
+        "JO",
+        "JOB",
+        "JOBS",
+        "JOCK",
+        "JOE",
+        "JOES",
+        "JOEY",
+        "JOG",
+        "JOGS",
+        "JOHN",
+        "JOIN",
+        "JOKE",
+        "JOKY",
+        "JOLE",
+        "JOLT",
+        "JOOK",
+        "JOSH",
+        "JOSS",
+        "JOT",
+        "JOTA",
+        "JOTS",
+        "JOUK",
+        "JOW",
+        "JOWL",
+        "JOWS",
+        "JOY",
+        "JOYS",
+        "JUBA",
+        "JUBE",
+        "JUCO",
+        "JUDO",
+        "JUDY",
+        "JUG",
+        "JUGA",
+        "JUGS",
+        "JUJU",
+        "JUKE",
+        "JUKU",
+        "JUMP",
+        "JUN",
+        "JUNK",
+        "JUPE",
+        "JURA",
+        "JURY",
+        "JUS",
+        "JUST",
+        "JUT",
+        "JUTE",
+        "JUTS",
+        "KOJI",
+        "MOJO",
+        "PUJA",
+        "RAJ",
+        "RAJA",
+        "SOJA",
+        "SOJU",
+        "TAJ",
+        "YAJE"
+      ],
+      "missPenaltySeconds": 5
+    },
+    "tisane-root": {
       "type": "anagram",
-      "title": "TISANE + one letter",
-      "description": "One of the most productive 6-letter stems. Add a letter to TISANE and unscramble the 7-letter bingo.",
+      "title": "TISANE+?",
       "puzzles": [
+        {
+          "scramble": "TISANEA",
+          "answers": [
+            "ENTASIA",
+            "TAENIAS"
+          ]
+        },
         {
           "scramble": "TISANEB",
           "answers": [
@@ -131,8 +373,22 @@
             "DESTAIN",
             "DETAINS",
             "INSTEAD",
+            "NIDATES",
             "SAINTED",
+            "SATINED",
             "STAINED"
+          ]
+        },
+        {
+          "scramble": "TISANEE",
+          "answers": [
+            "ETESIAN"
+          ]
+        },
+        {
+          "scramble": "TISANEF",
+          "answers": [
+            "FAINEST"
           ]
         },
         {
@@ -144,7 +400,75 @@
             "INGATES",
             "INGESTA",
             "SEATING",
+            "TAGINES",
             "TEASING"
+          ]
+        },
+        {
+          "scramble": "TISANEH",
+          "answers": [
+            "SHEITAN",
+            "STHENIA"
+          ]
+        },
+        {
+          "scramble": "TISANEI",
+          "answers": [
+            "ISATINE"
+          ]
+        },
+        {
+          "scramble": "TISANEJ",
+          "answers": [
+            "TAJINES"
+          ]
+        },
+        {
+          "scramble": "TISANEK",
+          "answers": [
+            "INTAKES"
+          ]
+        },
+        {
+          "scramble": "TISANEL",
+          "answers": [
+            "ELASTIN",
+            "ENTAILS",
+            "NAILSET",
+            "SALIENT",
+            "SALTINE",
+            "SLAINTE",
+            "TENAILS"
+          ]
+        },
+        {
+          "scramble": "TISANEM",
+          "answers": [
+            "ETAMINS",
+            "INMATES",
+            "TAMEINS"
+          ]
+        },
+        {
+          "scramble": "TISANEN",
+          "answers": [
+            "INANEST",
+            "STANINE"
+          ]
+        },
+        {
+          "scramble": "TISANEO",
+          "answers": [
+            "ATONIES"
+          ]
+        },
+        {
+          "scramble": "TISANEP",
+          "answers": [
+            "PANTIES",
+            "PATINES",
+            "SAPIENT",
+            "SPINATE"
           ]
         },
         {
@@ -159,6 +483,376 @@
             "RETSINA",
             "STAINER",
             "STEARIN"
+          ]
+        },
+        {
+          "scramble": "TISANES",
+          "answers": [
+            "ENTASIS",
+            "NASTIES",
+            "SEITANS",
+            "SESTINA",
+            "TANSIES",
+            "TISANES"
+          ]
+        },
+        {
+          "scramble": "TISANET",
+          "answers": [
+            "INSTATE",
+            "SATINET"
+          ]
+        },
+        {
+          "scramble": "TISANEU",
+          "answers": [
+            "AUNTIES",
+            "SINUATE"
+          ]
+        },
+        {
+          "scramble": "TISANEV",
+          "answers": [
+            "NAIVEST",
+            "NATIVES",
+            "VAINEST"
+          ]
+        },
+        {
+          "scramble": "TISANEW",
+          "answers": [
+            "TAWNIES",
+            "WANIEST"
+          ]
+        },
+        {
+          "scramble": "TISANEX",
+          "answers": [
+            "ANTISEX",
+            "SEXTAIN"
+          ]
+        },
+        {
+          "scramble": "TISANEZ",
+          "answers": [
+            "ZANIEST",
+            "ZEATINS"
+          ]
+        }
+      ]
+    },
+    "retain-root": {
+      "type": "anagram",
+      "title": "RETAIN+?",
+      "puzzles": [
+        {
+          "scramble": "RETAINC",
+          "answers": [
+            "CERATIN",
+            "CERTAIN",
+            "CREATIN",
+            "TACRINE"
+          ]
+        },
+        {
+          "scramble": "RETAIND",
+          "answers": [
+            "ANTIRED",
+            "DETRAIN",
+            "TRAINED"
+          ]
+        },
+        {
+          "scramble": "RETAINE",
+          "answers": [
+            "ARENITE",
+            "RETINAE",
+            "TRAINEE"
+          ]
+        },
+        {
+          "scramble": "RETAINF",
+          "answers": [
+            "FAINTER"
+          ]
+        },
+        {
+          "scramble": "RETAING",
+          "answers": [
+            "GRANITE",
+            "GRATINE",
+            "INGRATE",
+            "TANGIER",
+            "TEARING"
+          ]
+        },
+        {
+          "scramble": "RETAINH",
+          "answers": [
+            "HAIRNET",
+            "INEARTH",
+            "THERIAN"
+          ]
+        },
+        {
+          "scramble": "RETAINI",
+          "answers": [
+            "INERTIA"
+          ]
+        },
+        {
+          "scramble": "RETAINK",
+          "answers": [
+            "KERATIN"
+          ]
+        },
+        {
+          "scramble": "RETAINL",
+          "answers": [
+            "LATRINE",
+            "RATLINE",
+            "RELIANT",
+            "RETINAL",
+            "TRENAIL"
+          ]
+        },
+        {
+          "scramble": "RETAINM",
+          "answers": [
+            "MINARET",
+            "RAIMENT"
+          ]
+        },
+        {
+          "scramble": "RETAINN",
+          "answers": [
+            "ENTRAIN",
+            "TRANNIE"
+          ]
+        },
+        {
+          "scramble": "RETAINP",
+          "answers": [
+            "PAINTER",
+            "PERTAIN",
+            "REPAINT"
+          ]
+        },
+        {
+          "scramble": "RETAINR",
+          "answers": [
+            "RETRAIN",
+            "TERRAIN",
+            "TRAINER"
+          ]
+        },
+        {
+          "scramble": "RETAINS",
+          "answers": [
+            "ANESTRI",
+            "ANTSIER",
+            "NASTIER",
+            "RATINES",
+            "RETAINS",
+            "RETINAS",
+            "RETSINA",
+            "STAINER",
+            "STEARIN"
+          ]
+        },
+        {
+          "scramble": "RETAINT",
+          "answers": [
+            "INTREAT",
+            "ITERANT",
+            "NATTIER",
+            "NITRATE",
+            "TERTIAN"
+          ]
+        },
+        {
+          "scramble": "RETAINU",
+          "answers": [
+            "RUINATE",
+            "TAURINE",
+            "URANITE",
+            "URINATE"
+          ]
+        },
+        {
+          "scramble": "RETAINW",
+          "answers": [
+            "TAWNIER",
+            "TINWARE"
+          ]
+        }
+      ]
+    },
+    "satire-root": {
+      "type": "anagram",
+      "title": "SATIRE+?",
+      "puzzles": [
+        {
+          "scramble": "SATIREA",
+          "answers": [
+            "ARISTAE",
+            "ASTERIA",
+            "ATRESIA"
+          ]
+        },
+        {
+          "scramble": "SATIREB",
+          "answers": [
+            "BAITERS",
+            "BARITES",
+            "REBAITS",
+            "TERBIAS"
+          ]
+        },
+        {
+          "scramble": "SATIREC",
+          "answers": [
+            "ATRESIC",
+            "CRISTAE",
+            "RACIEST",
+            "STEARIC"
+          ]
+        },
+        {
+          "scramble": "SATIRED",
+          "answers": [
+            "ARIDEST",
+            "ASTRIDE",
+            "DIASTER",
+            "DISRATE",
+            "STAIDER",
+            "TARDIES",
+            "TIRADES"
+          ]
+        },
+        {
+          "scramble": "SATIREE",
+          "answers": [
+            "AERIEST",
+            "SERIATE"
+          ]
+        },
+        {
+          "scramble": "SATIREF",
+          "answers": [
+            "FAIREST"
+          ]
+        },
+        {
+          "scramble": "SATIREG",
+          "answers": [
+            "AIGRETS",
+            "GAITERS",
+            "SEAGIRT",
+            "STAGIER",
+            "TRIAGES"
+          ]
+        },
+        {
+          "scramble": "SATIREH",
+          "answers": [
+            "HASTIER"
+          ]
+        },
+        {
+          "scramble": "SATIREI",
+          "answers": [
+            "AIRIEST"
+          ]
+        },
+        {
+          "scramble": "SATIREL",
+          "answers": [
+            "REALIST",
+            "RETAILS",
+            "SALTIER",
+            "SALTIRE",
+            "SLATIER",
+            "TAILERS"
+          ]
+        },
+        {
+          "scramble": "SATIREM",
+          "answers": [
+            "IMARETS",
+            "MAESTRI",
+            "MISRATE",
+            "SMARTIE"
+          ]
+        },
+        {
+          "scramble": "SATIREN",
+          "answers": [
+            "ANESTRI",
+            "ANTSIER",
+            "NASTIER",
+            "RATINES",
+            "RETAINS",
+            "RETINAS",
+            "RETSINA",
+            "STAINER",
+            "STEARIN"
+          ]
+        },
+        {
+          "scramble": "SATIREP",
+          "answers": [
+            "PARTIES",
+            "PASTIER",
+            "PIASTER",
+            "PIASTRE",
+            "PIRATES",
+            "PRATIES",
+            "TRAIPSE"
+          ]
+        },
+        {
+          "scramble": "SATIRER",
+          "answers": [
+            "ARTSIER",
+            "TARRIES",
+            "TARSIER"
+          ]
+        },
+        {
+          "scramble": "SATIRES",
+          "answers": [
+            "ARTSIES",
+            "SATIRES"
+          ]
+        },
+        {
+          "scramble": "SATIRET",
+          "answers": [
+            "ARTIEST",
+            "ARTISTE",
+            "ATTIRES",
+            "IRATEST",
+            "RATITES",
+            "STRIATE",
+            "TASTIER"
+          ]
+        },
+        {
+          "scramble": "SATIREV",
+          "answers": [
+            "RAVIEST",
+            "VASTIER",
+            "VERITAS"
+          ]
+        },
+        {
+          "scramble": "SATIREW",
+          "answers": [
+            "WAISTER",
+            "WAITERS",
+            "WARIEST",
+            "WASTRIE"
           ]
         }
       ]
