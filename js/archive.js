@@ -19,10 +19,13 @@ async function init() {
 
   const weekly = puzzles.weekly || {};
   const today = todayISO();
-  const pastKeys = Object.keys(weekly)
-    .filter(k => k < today)
-    .sort()
-    .reverse();
+  // Anything with a date ≤ today is considered "released" — the most-recent
+  // such key is the currently-active puzzle on the home page. The archive
+  // should only reveal weeks older than the active one, so a week's answers
+  // don't appear until the next week goes live.
+  const releasedKeys = Object.keys(weekly).filter(k => k <= today).sort();
+  const activeKey = releasedKeys[releasedKeys.length - 1];
+  const pastKeys = releasedKeys.filter(k => k !== activeKey).reverse();
 
   const root = $("#archive-root");
   if (pastKeys.length === 0) {
