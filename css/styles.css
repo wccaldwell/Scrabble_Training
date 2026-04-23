@@ -80,6 +80,18 @@ footer {
   font-family: var(--font-serif);
 }
 
+details.card > summary {
+  cursor: pointer;
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-weight: 700;
+  user-select: none;
+  list-style-position: inside;
+}
+details.card[open] > summary {
+  margin-bottom: 12px;
+}
+
 .hidden { display: none !important; }
 
 .muted { color: var(--ink-muted); }

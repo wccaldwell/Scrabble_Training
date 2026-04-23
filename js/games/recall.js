@@ -2,6 +2,17 @@ import { escapeHtml, formatTime } from "../leaderboard.js";
 
 const byLengthThenAlpha = (a, b) => a.length - b.length || a.localeCompare(b);
 
+export function renderRecallAnswers(week) {
+  const sorted = [...new Set(week.answers.map(a => a.toUpperCase()))].sort(byLengthThenAlpha);
+  const answersHtml = sorted
+    .map(w => `<span class="answer found">${escapeHtml(w)}</span>`)
+    .join(" ");
+  const desc = week.description
+    ? `<p class="muted" style="margin-top:0">${escapeHtml(week.description)}</p>`
+    : "";
+  return `${desc}<div class="review-puzzle"><div class="review-answers">${answersHtml}</div></div>`;
+}
+
 export function runRecallGame(root, week) {
   return new Promise(resolve => {
     const answerSet = new Set(week.answers.map(a => a.toUpperCase()));

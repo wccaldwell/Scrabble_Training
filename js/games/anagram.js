@@ -1,5 +1,20 @@
 import { escapeHtml, formatTime } from "../leaderboard.js";
 
+export function renderAnagramAnswers(week) {
+  return week.puzzles.map(p => {
+    const tiles = [...p.scramble.toUpperCase()].join(" ");
+    const answers = p.answers
+      .map(a => `<span class="answer found">${escapeHtml(a.toUpperCase())}</span>`)
+      .join(" ");
+    return `
+      <div class="review-puzzle">
+        <h3>${escapeHtml(tiles)} <span class="muted" style="font-size:14px;font-weight:400">· ${p.answers.length} valid</span></h3>
+        <div class="review-answers">${answers}</div>
+      </div>
+    `;
+  }).join("");
+}
+
 export function runAnagramGame(root, week) {
   return new Promise(resolve => {
     const state = {

@@ -1,9 +1,9 @@
 import { getName, setName, clearName, hasSubmittedWeek, markSubmittedWeek } from "./storage.js";
 import { submitScore } from "./submit.js";
 import { fetchRows, rankWeekly, hasNameSubmitted, renderTable } from "./leaderboard.js";
-import { runAnagramGame } from "./games/anagram.js";
-import { runHooksGame } from "./games/hooks.js";
-import { runRecallGame } from "./games/recall.js";
+import { runAnagramGame, renderAnagramAnswers } from "./games/anagram.js";
+import { runHooksGame, renderHooksAnswers } from "./games/hooks.js";
+import { runRecallGame, renderRecallAnswers } from "./games/recall.js";
 
 const $ = sel => document.querySelector(sel);
 
@@ -37,6 +37,7 @@ async function init() {
   // Same-device block — definitely this user.
   if (hasSubmittedWeek(weekKey)) {
     showAlreadySubmitted({ fromSheet: false });
+    showAnswersReveal(week);
     await showLeaderboard(puzzleKey);
     return;
   }
@@ -47,6 +48,7 @@ async function init() {
     const rows = await fetchRows();
     if (rows && hasNameSubmitted(rows, puzzleKey, getName())) {
       showAlreadySubmitted({ fromSheet: true });
+      showAnswersReveal(week);
       await showLeaderboard(puzzleKey);
       return;
     }
@@ -98,6 +100,20 @@ function pickCurrentWeek(weekly) {
 function todayISO() {
   const d = new Date();
   return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+}
+
+function showAnswersReveal(week) {
+  const section = $("#answers-reveal");
+  const body = $("#answers-reveal-body");
+  let html = "";
+  switch (week.type) {
+    case "anagram": html = renderAnagramAnswers(week); break;
+    case "hooks":   html = renderHooksAnswers(week); break;
+    case "recall":  html = renderRecallAnswers(week); break;
+    default:        html = `<p class="muted">Answers aren't available for this puzzle type.</p>`;
+  }
+  body.innerHTML = html;
+  section.classList.remove("hidden");
 }
 
 function showAlreadySubmitted({ fromSheet }) {

@@ -2,6 +2,27 @@ import { escapeHtml, formatTime } from "../leaderboard.js";
 
 const ALPHA = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 
+export function renderHooksAnswers(week) {
+  return week.puzzles.map(p => {
+    const word = p.word.toUpperCase();
+    const front = (p.front || []).map(l => l.toUpperCase()).sort();
+    const back = (p.back || []).map(l => l.toUpperCase()).sort();
+    const frontHtml = front.length
+      ? front.map(l => `<span class="answer found">${escapeHtml(l)}</span>`).join(" ")
+      : `<span class="muted">(none)</span>`;
+    const backHtml = back.length
+      ? back.map(l => `<span class="answer found">${escapeHtml(l)}</span>`).join(" ")
+      : `<span class="muted">(none)</span>`;
+    return `
+      <div class="review-puzzle">
+        <h3>${escapeHtml(word)}</h3>
+        <div><span class="muted">Front:</span> ${frontHtml}</div>
+        <div style="margin-top:6px"><span class="muted">Back:</span> ${backHtml}</div>
+      </div>
+    `;
+  }).join("");
+}
+
 export function runHooksGame(root, week) {
   return new Promise(resolve => {
     const state = {
