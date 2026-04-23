@@ -353,10 +353,11 @@ form#name-form {
   text-decoration: line-through;
 }
 .hook-btn.missed {
-  background: transparent;
-  color: var(--ink-muted);
+  background: #fff6d9;
+  color: #8a6a00;
+  border-color: #d8b94a;
   border-style: dashed;
-  border-color: var(--ink-muted);
+  font-weight: 700;
 }
 .hook-btn.dim {
   opacity: 0.35;
