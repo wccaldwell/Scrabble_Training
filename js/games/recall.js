@@ -1,9 +1,11 @@
 import { escapeHtml, formatTime } from "../leaderboard.js";
 
+const byLengthThenAlpha = (a, b) => a.length - b.length || a.localeCompare(b);
+
 export function runRecallGame(root, week) {
   return new Promise(resolve => {
     const answerSet = new Set(week.answers.map(a => a.toUpperCase()));
-    const sortedAnswers = [...answerSet].sort();
+    const sortedAnswers = [...answerSet].sort(byLengthThenAlpha);
     const penalty = Number(week.missPenaltySeconds) || 0;
 
     const state = {
@@ -128,7 +130,7 @@ export function runRecallGame(root, week) {
 
     function renderReview({ correct, total, timeSeconds, penaltySeconds }) {
       const pct = total > 0 ? Math.round((correct / total) * 100) : 0;
-      const sorted = [...answerSet].sort();
+      const sorted = [...answerSet].sort(byLengthThenAlpha);
       const answersHtml = sorted.map(w => {
         const cls = state.found.has(w) ? "found" : "missed";
         return `<span class="answer ${cls}">${escapeHtml(w)}</span>`;
