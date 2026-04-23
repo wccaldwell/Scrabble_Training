@@ -30,6 +30,18 @@
     <section id="practice-list" class="card hidden">
       <h2>Practice puzzles</h2>
       <p class="muted">Play as many times as you like. Leaderboards show each player's best attempt.</p>
+      <div class="filter-bar">
+        <div class="filter-group" id="type-filter">
+          <button type="button" class="filter-pill active" data-type="all">All</button>
+          <button type="button" class="filter-pill" data-type="anagram">Anagram</button>
+          <button type="button" class="filter-pill" data-type="hooks">Hooks</button>
+          <button type="button" class="filter-pill" data-type="recall">Recall</button>
+        </div>
+        <label class="filter-toggle">
+          <input type="checkbox" id="unattempted-only" />
+          Not yet attempted
+        </label>
+      </div>
       <ul id="practice-list-body" class="practice-list"></ul>
     </section>
 

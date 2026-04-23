@@ -457,6 +457,50 @@ form#name-form {
 .leaderboard-table td.score { font-variant-numeric: tabular-nums; text-align: right; }
 .leaderboard-table tr.you { background: #fdf4d7; }
 
+/* Filter bar */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  align-items: center;
+  margin: 12px 0;
+}
+.filter-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.filter-pill {
+  background: #fff;
+  color: var(--ink);
+  border: 1px solid var(--border);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.filter-pill:hover:not(.active) {
+  background: #fdf4d7;
+}
+.filter-pill.active {
+  background: var(--tile);
+  border-color: #b68a2e;
+  color: var(--tile-ink);
+}
+.filter-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: var(--ink);
+  cursor: pointer;
+  user-select: none;
+}
+.filter-toggle input[type="checkbox"] {
+  accent-color: var(--accent);
+}
+
 /* Practice list */
 .practice-list {
   list-style: none;

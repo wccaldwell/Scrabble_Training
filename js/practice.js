@@ -28,13 +28,42 @@ async function init() {
 function renderList(perm) {
   const section = $("#practice-list");
   section.classList.remove("hidden");
+  wireFilters(perm);
+  drawList(perm);
+}
+
+function wireFilters(perm) {
+  $("#type-filter").addEventListener("click", e => {
+    const btn = e.target.closest(".filter-pill");
+    if (!btn) return;
+    $("#type-filter").querySelectorAll(".filter-pill").forEach(b => b.classList.toggle("active", b === btn));
+    drawList(perm);
+  });
+  $("#unattempted-only").addEventListener("change", () => drawList(perm));
+}
+
+function drawList(perm) {
   const body = $("#practice-list-body");
   const entries = Object.entries(perm);
   if (entries.length === 0) {
     body.innerHTML = `<li class="muted">No practice puzzles yet.</li>`;
     return;
   }
-  body.innerHTML = entries.map(([slug, p]) => {
+  const activeType = $("#type-filter").querySelector(".filter-pill.active")?.dataset.type || "all";
+  const unattemptedOnly = $("#unattempted-only").checked;
+
+  const filtered = entries.filter(([slug, p]) => {
+    if (activeType !== "all" && p.type !== activeType) return false;
+    if (unattemptedOnly && getPersonalBest(`permanent:${slug}`)) return false;
+    return true;
+  });
+
+  if (filtered.length === 0) {
+    body.innerHTML = `<li class="muted">No puzzles match the current filter.</li>`;
+    return;
+  }
+
+  body.innerHTML = filtered.map(([slug, p]) => {
     const best = getPersonalBest(`permanent:${slug}`);
     const bestText = best
       ? `Best: ${best.correct}/${best.total} (${Math.round((best.correct / best.total) * 100)}%) in ${formatTime(best.timeSeconds)} · ${best.attempts} attempts`
