@@ -1,0 +1,45 @@
+{
+  "weekly": {
+    "2026-04-20": {
+      "type": "anagram",
+      "title": "Warm-up: 7-letter bingos",
+      "puzzles": [
+        { "scramble": "ETAINSR", "answers": ["RETAINS", "RETSINA", "STAINER", "NASTIER", "RATINES", "ANESTRI", "ANTSIER"] },
+        { "scramble": "OERSTAG", "answers": ["STORAGE", "GAROTES", "ORGEATS"] },
+        { "scramble": "AEINRTU", "answers": ["URINATE", "RUINATE", "TAURINE", "URANITE", "URETANI"] },
+        { "scramble": "DEINORS", "answers": ["INDORSE", "ROSINED", "DINEROS", "SORDINE"] },
+        { "scramble": "AEGILNR", "answers": ["ALIGNER", "ENGRAIL", "NARGILE", "REALIGN"] }
+      ]
+    }
+  },
+  "permanent": {
+    "two-letter-words-sample": {
+      "type": "recall",
+      "title": "2-letter words starting with A (sample)",
+      "description": "Short warm-up list. Full 2-letter list can replace this once you're ready.",
+      "answers": ["AA", "AB", "AD", "AE", "AG", "AH", "AI", "AL", "AM", "AN", "AR", "AS", "AT", "AW", "AX", "AY"],
+      "missPenaltySeconds": 5
+    },
+    "hooks-3-letter-sample": {
+      "type": "hooks",
+      "title": "Front + back hooks on common 3-letter words (sample)",
+      "puzzles": [
+        { "word": "EAR", "front": ["B","D","F","G","H","L","N","P","R","S","T","W","Y"], "back": ["L","N","S"] },
+        { "word": "CAT", "front": ["S"], "back": ["E","S"] },
+        { "word": "OAR", "front": ["B","R","S"], "back": ["S"] }
+      ]
+    },
+    "bingo-stems-tisane": {
+      "type": "anagram",
+      "title": "TISANE + one letter",
+      "description": "One of the most productive 6-letter stems. Add a letter to TISANE and unscramble the 7-letter bingo.",
+      "puzzles": [
+        { "scramble": "TISANEB", "answers": ["BANTIES", "BASINET"] },
+        { "scramble": "TISANEC", "answers": ["ACETINS", "CINEAST"] },
+        { "scramble": "TISANED", "answers": ["DESTAIN", "DETAINS", "INSTEAD", "SAINTED", "STAINED"] },
+        { "scramble": "TISANEG", "answers": ["EASTING", "EATINGS", "GENISTA", "INGATES", "INGESTA", "SEATING", "TEASING"] },
+        { "scramble": "TISANER", "answers": ["ANESTRI", "ANTSIER", "NASTIER", "RATINES", "RETAINS", "RETINAS", "RETSINA", "STAINER", "STEARIN"] }
+      ]
+    }
+  }
+}

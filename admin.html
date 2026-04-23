@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin — Scrabble Training</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="index.html">Scrabble Training</a></h1>
+    <nav>
+      <a href="index.html">This Week</a>
+      <a href="practice.html">Practice</a>
+      <a href="admin.html" class="active">Admin</a>
+    </nav>
+  </header>
+
+  <main id="app">
+    <section class="card">
+      <h2>Admin preview</h2>
+      <p class="muted">Preview any queued puzzle without submitting a score. Not linked from the main site — share the URL only with yourself.</p>
+    </section>
+
+    <section class="card">
+      <h2>Reset local state</h2>
+      <p class="muted">Clears data stored in this browser only. Doesn't touch the leaderboard sheet.</p>
+      <div class="game-actions" style="justify-content:flex-start">
+        <button class="secondary" id="reset-weekly">Clear weekly submission locks</button>
+        <button class="secondary" id="reset-bests">Clear practice bests</button>
+        <button class="secondary" id="reset-name">Clear saved name</button>
+        <button id="reset-all">Clear everything</button>
+      </div>
+      <p id="reset-status" class="muted" style="margin-top:10px"></p>
+    </section>
+
+    <section id="weekly-section" class="card">
+      <h2>Weekly puzzles</h2>
+      <ul id="weekly-list" class="admin-list"></ul>
+    </section>
+
+    <section id="permanent-section" class="card">
+      <h2>Practice puzzles</h2>
+      <ul id="permanent-list" class="admin-list"></ul>
+    </section>
+
+    <section id="preview-root"></section>
+  </main>
+
+  <script type="module" src="js/admin.js"></script>
+</body>
+</html>

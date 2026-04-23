@@ -1,0 +1,31 @@
+# Desktop puzzle-generator tool and its reference data (local-only)
+tools/
+nwl23.txt
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Logs, temp files
+*.log
+*.tmp
+*.swp
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.iml
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Node (in case anyone adds tooling later)
+node_modules/
+dist/
+build/

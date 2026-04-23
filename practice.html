@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Practice — Scrabble Training</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="index.html">Scrabble Training</a></h1>
+    <nav>
+      <a href="index.html">This Week</a>
+      <a href="practice.html" class="active">Practice</a>
+    </nav>
+  </header>
+
+  <main id="app">
+    <section id="name-gate" class="card hidden">
+      <h2>Welcome</h2>
+      <p>Enter your name to get started. We'll remember it on this device.</p>
+      <form id="name-form">
+        <input id="name-input" type="text" autocomplete="name" required maxlength="40" placeholder="Your name" />
+        <button type="submit">Save</button>
+      </form>
+    </section>
+
+    <section id="practice-list" class="card hidden">
+      <h2>Practice puzzles</h2>
+      <p class="muted">Play as many times as you like. Leaderboards show each player's best attempt.</p>
+      <ul id="practice-list-body" class="practice-list"></ul>
+    </section>
+
+    <section id="game-root"></section>
+
+    <section id="leaderboard-root" class="card hidden">
+      <h2 id="leaderboard-title">Leaderboard</h2>
+      <div id="leaderboard-body" class="muted">Loading…</div>
+    </section>
+  </main>
+
+  <footer>
+    <button id="change-name" class="link-button">Change name</button>
+  </footer>
+
+  <script type="module" src="js/practice.js"></script>
+</body>
+</html>

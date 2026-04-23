@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scrabble Training</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="index.html">Scrabble Training</a></h1>
+    <nav>
+      <a href="index.html">This Week</a>
+      <a href="practice.html">Practice</a>
+    </nav>
+  </header>
+
+  <main id="app">
+    <section id="name-gate" class="card hidden">
+      <h2>Welcome</h2>
+      <p>Enter your name to get started. We'll remember it on this device.</p>
+      <form id="name-form">
+        <input id="name-input" type="text" autocomplete="name" required maxlength="40" placeholder="Your name" />
+        <button type="submit">Save</button>
+      </form>
+    </section>
+
+    <section id="week-header" class="card hidden">
+      <div class="week-meta">
+        <span id="week-date"></span>
+        <span id="week-type" class="pill"></span>
+      </div>
+      <h2 id="week-title"></h2>
+      <div id="greeting" class="muted"></div>
+    </section>
+
+    <section id="already-submitted" class="card hidden">
+      <h2>You've already played this week</h2>
+      <p>Come back next week for a new puzzle. Leaderboard below.</p>
+    </section>
+
+    <section id="game-root"></section>
+
+    <section id="leaderboard-root" class="card hidden">
+      <h2>Leaderboard — this week</h2>
+      <div id="leaderboard-body" class="muted">Loading…</div>
+    </section>
+
+    <section id="no-puzzle" class="card hidden">
+      <h2>No puzzle queued yet</h2>
+      <p>Check back soon.</p>
+    </section>
+  </main>
+
+  <footer>
+    <button id="change-name" class="link-button">Change name</button>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
