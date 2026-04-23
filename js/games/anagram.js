@@ -2,7 +2,7 @@ import { escapeHtml, formatTime } from "../leaderboard.js";
 
 export function renderAnagramAnswers(week) {
   return week.puzzles.map(p => {
-    const tiles = [...p.scramble.toUpperCase()].join(" ");
+    const tiles = [...p.scramble.toUpperCase()].sort().join(" ");
     const answers = p.answers
       .map(a => `<span class="answer found">${escapeHtml(a.toUpperCase())}</span>`)
       .join(" ");
@@ -73,7 +73,7 @@ export function runAnagramGame(root, week) {
 
     function renderCard() {
       const p = state.puzzles[state.index];
-      const tiles = [...p.scramble].map(ch => `<span class="tile">${ch}</span>`).join("");
+      const tiles = [...p.scramble].sort().map(ch => `<span class="tile">${ch}</span>`).join("");
       const foundHtml = [...p.found].map(a => `<span class="found">${escapeHtml(a)}</span>`).join("");
       const progressLabel = `Puzzle ${state.index + 1} of ${state.puzzles.length}`;
       const countLabel = `${p.answers.length} valid ${p.answers.length === 1 ? "word" : "words"}`;
@@ -186,7 +186,7 @@ export function runAnagramGame(root, week) {
           const cls = p.found.has(a) ? "found" : "missed";
           return `<span class="answer ${cls}">${escapeHtml(a)}</span>`;
         }).join("");
-        const tiles = [...p.scramble].join(" ");
+        const tiles = [...p.scramble].sort().join(" ");
         return `
           <div class="review-puzzle">
             <h3>${escapeHtml(tiles)} <span class="muted" style="font-size:14px;font-weight:400">· ${p.found.size}/${p.answers.length}</span></h3>
