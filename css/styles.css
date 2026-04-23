@@ -158,6 +158,19 @@ input[type="text"] {
   width: 100%;
   max-width: 320px;
 }
+
+select.puzzle-select {
+  font: inherit;
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: #fff;
+  color: var(--ink);
+  width: 100%;
+  max-width: 420px;
+  display: block;
+  margin-top: 4px;
+}
 input[type="text"]:focus {
   outline: 2px solid var(--tile);
   outline-offset: 1px;
