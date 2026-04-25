@@ -2090,9 +2090,315 @@
         }
       ]
     },
-    "2to3-a": {
+    "2-to-4-xwords": {
+      "type": "recall",
+      "title": "2- to 4-Letter X Words",
+      "answers": [
+        "APEX",
+        "AX",
+        "AXAL",
+        "AXE",
+        "AXED",
+        "AXEL",
+        "AXES",
+        "AXIL",
+        "AXIS",
+        "AXLE",
+        "AXON",
+        "BOX",
+        "BOXY",
+        "BRUX",
+        "CALX",
+        "COAX",
+        "COX",
+        "COXA",
+        "CRUX",
+        "DEX",
+        "DEXY",
+        "DOUX",
+        "DOX",
+        "DOXX",
+        "DOXY",
+        "EAUX",
+        "EX",
+        "EXAM",
+        "EXEC",
+        "EXED",
+        "EXES",
+        "EXIT",
+        "EXON",
+        "EXPO",
+        "FALX",
+        "FAUX",
+        "FAX",
+        "FIX",
+        "FIXT",
+        "FLAX",
+        "FLEX",
+        "FLUX",
+        "FOLX",
+        "FOX",
+        "FOXY",
+        "GOX",
+        "HEX",
+        "HOAX",
+        "IBEX",
+        "ILEX",
+        "IXIA",
+        "JEUX",
+        "JINX",
+        "KEX",
+        "LAX",
+        "LEX",
+        "LOX",
+        "LUX",
+        "LUXE",
+        "LYNX",
+        "MAX",
+        "MAXI",
+        "MINX",
+        "MIX",
+        "MIXT",
+        "MOXA",
+        "MPOX",
+        "MUX",
+        "NEXT",
+        "NIX",
+        "NIXE",
+        "NIXY",
+        "ONYX",
+        "ORYX",
+        "OX",
+        "OXEN",
+        "OXER",
+        "OXES",
+        "OXIC",
+        "OXID",
+        "OXIM",
+        "OXO",
+        "OXY",
+        "PAX",
+        "PIX",
+        "PIXY",
+        "PLEX",
+        "POX",
+        "POXY",
+        "PREX",
+        "PYX",
+        "RAX",
+        "REX",
+        "ROUX",
+        "SAX",
+        "SEX",
+        "SEXT",
+        "SEXY",
+        "SIX",
+        "SOX",
+        "TAX",
+        "TAXA",
+        "TAXI",
+        "TEXT",
+        "TIX",
+        "TUX",
+        "VAX",
+        "VAXX",
+        "VEX",
+        "VEXT",
+        "VOX",
+        "WAX",
+        "WAXY",
+        "XED",
+        "XI",
+        "XIS",
+        "XU",
+        "XYST",
+        "ZAX"
+      ],
+      "missPenaltySeconds": 5
+    },
+    "2-letter-words": {
+      "type": "recall",
+      "title": "2-Letter Words",
+      "answers": [
+        "AA",
+        "AB",
+        "AD",
+        "AE",
+        "AG",
+        "AH",
+        "AI",
+        "AL",
+        "AM",
+        "AN",
+        "AR",
+        "AS",
+        "AT",
+        "AW",
+        "AX",
+        "AY",
+        "BA",
+        "BE",
+        "BI",
+        "BO",
+        "BY",
+        "DA",
+        "DE",
+        "DO",
+        "ED",
+        "EF",
+        "EH",
+        "EL",
+        "EM",
+        "EN",
+        "ER",
+        "ES",
+        "ET",
+        "EW",
+        "EX",
+        "FA",
+        "FE",
+        "GI",
+        "GO",
+        "HA",
+        "HE",
+        "HI",
+        "HM",
+        "HO",
+        "ID",
+        "IF",
+        "IN",
+        "IS",
+        "IT",
+        "JO",
+        "KA",
+        "KI",
+        "LA",
+        "LI",
+        "LO",
+        "MA",
+        "ME",
+        "MI",
+        "MM",
+        "MO",
+        "MU",
+        "MY",
+        "NA",
+        "NE",
+        "NO",
+        "NU",
+        "OD",
+        "OE",
+        "OF",
+        "OH",
+        "OI",
+        "OK",
+        "OM",
+        "ON",
+        "OP",
+        "OR",
+        "OS",
+        "OW",
+        "OX",
+        "OY",
+        "PA",
+        "PE",
+        "PI",
+        "PO",
+        "QI",
+        "RE",
+        "SH",
+        "SI",
+        "SO",
+        "TA",
+        "TE",
+        "TI",
+        "TO",
+        "UH",
+        "UM",
+        "UN",
+        "UP",
+        "US",
+        "UT",
+        "WE",
+        "WO",
+        "XI",
+        "XU",
+        "YA",
+        "YE",
+        "YO",
+        "ZA"
+      ],
+      "missPenaltySeconds": 5
+    },
+    "idumps": {
+      "type": "recall",
+      "title": "I Dumps",
+      "answers": [
+        "BIDI",
+        "BIKINI",
+        "BIMINI",
+        "HILI",
+        "IBIS",
+        "ILIA",
+        "IMID",
+        "IMIDIC",
+        "IMPI",
+        "INIA",
+        "INTI",
+        "IRID",
+        "IRIDIC",
+        "IRIS",
+        "IRITIC",
+        "IRITIS",
+        "IWIS",
+        "IXIA",
+        "KIWI",
+        "LIRI",
+        "MIDI",
+        "MINI",
+        "MIRI",
+        "NIDI",
+        "NISI",
+        "PIKI",
+        "PILI",
+        "TIKI",
+        "TIPI",
+        "TITI",
+        "WIKI",
+        "ZITI"
+      ],
+      "missPenaltySeconds": 5
+    },
+    "udumps": {
+      "type": "recall",
+      "title": "U Dumps",
+      "answers": [
+        "BUBU",
+        "FUGU",
+        "GURU",
+        "JUJU",
+        "JUKU",
+        "KUDU",
+        "KURU",
+        "LUAU",
+        "LULU",
+        "MUMU",
+        "MUUMUU",
+        "PUDU",
+        "PUPU",
+        "SULU",
+        "TUTU",
+        "ULU",
+        "ULUS",
+        "UNAU",
+        "URUS",
+        "YUZU"
+      ],
+      "missPenaltySeconds": 5
+    },
+    "2-3-hooks": {
       "type": "hooks",
-      "title": "2 to 3 A's",
+      "title": "2 to 3 Hooks",
       "puzzles": [
         {
           "word": "AA",
@@ -2449,314 +2755,2597 @@
             "E",
             "S"
           ]
+        },
+        {
+          "word": "BA",
+          "front": [
+            "A",
+            "O"
+          ],
+          "back": [
+            "A",
+            "D",
+            "E",
+            "G",
+            "H",
+            "L",
+            "M",
+            "N",
+            "P",
+            "R",
+            "S",
+            "T",
+            "Y"
+          ]
+        },
+        {
+          "word": "BE",
+          "front": [
+            "O"
+          ],
+          "back": [
+            "D",
+            "E",
+            "G",
+            "L",
+            "N",
+            "S",
+            "T",
+            "Y"
+          ]
+        },
+        {
+          "word": "BI",
+          "front": [
+            "O"
+          ],
+          "back": [
+            "B",
+            "D",
+            "G",
+            "N",
+            "O",
+            "S",
+            "T",
+            "Z"
+          ]
+        },
+        {
+          "word": "BO",
+          "front": [],
+          "back": [
+            "A",
+            "B",
+            "D",
+            "G",
+            "O",
+            "P",
+            "S",
+            "T",
+            "W",
+            "X",
+            "Y"
+          ]
+        },
+        {
+          "word": "BY",
+          "front": [
+            "A"
+          ],
+          "back": [
+            "E",
+            "S"
+          ]
+        },
+        {
+          "word": "DA",
+          "front": [
+            "O"
+          ],
+          "back": [
+            "B",
+            "D",
+            "G",
+            "H",
+            "K",
+            "L",
+            "M",
+            "N",
+            "P",
+            "S",
+            "W",
+            "Y"
+          ]
+        },
+        {
+          "word": "DE",
+          "front": [
+            "O"
+          ],
+          "back": [
+            "B",
+            "E",
+            "F",
+            "L",
+            "N",
+            "P",
+            "V",
+            "W",
+            "X",
+            "Y"
+          ]
+        },
+        {
+          "word": "DO",
+          "front": [
+            "A",
+            "U"
+          ],
+          "back": [
+            "C",
+            "E",
+            "G",
+            "H",
+            "L",
+            "M",
+            "N",
+            "R",
+            "S",
+            "T",
+            "W",
+            "X"
+          ]
+        },
+        {
+          "word": "ED",
+          "front": [
+            "B",
+            "F",
+            "G",
+            "L",
+            "M",
+            "P",
+            "R",
+            "T",
+            "W",
+            "X",
+            "Z"
+          ],
+          "back": [
+            "H",
+            "S"
+          ]
+        },
+        {
+          "word": "EF",
+          "front": [
+            "D",
+            "K",
+            "R"
+          ],
+          "back": [
+            "F",
+            "S",
+            "T"
+          ]
+        },
+        {
+          "word": "EH",
+          "front": [
+            "F",
+            "H",
+            "M",
+            "P",
+            "Y"
+          ],
+          "back": []
+        },
+        {
+          "word": "EL",
+          "front": [
+            "B",
+            "C",
+            "D",
+            "E",
+            "G",
+            "M",
+            "S",
+            "T"
+          ],
+          "back": [
+            "D",
+            "F",
+            "K",
+            "L",
+            "M",
+            "S"
+          ]
+        },
+        {
+          "word": "EM",
+          "front": [
+            "F",
+            "G",
+            "H",
+            "M",
+            "R"
+          ],
+          "back": [
+            "E",
+            "O",
+            "S",
+            "U"
+          ]
+        },
+        {
+          "word": "EN",
+          "front": [
+            "B",
+            "D",
+            "F",
+            "G",
+            "H",
+            "K",
+            "M",
+            "P",
+            "S",
+            "T",
+            "W",
+            "Y",
+            "Z"
+          ],
+          "back": [
+            "D",
+            "G",
+            "S"
+          ]
+        },
+        {
+          "word": "ER",
+          "front": [
+            "F",
+            "H",
+            "P",
+            "S",
+            "Y"
+          ],
+          "back": [
+            "A",
+            "E",
+            "G",
+            "N",
+            "R",
+            "S"
+          ]
+        },
+        {
+          "word": "ES",
+          "front": [
+            "B",
+            "F",
+            "H",
+            "M",
+            "O",
+            "P",
+            "R",
+            "T",
+            "Y"
+          ],
+          "back": [
+            "S",
+            "T"
+          ]
+        },
+        {
+          "word": "ET",
+          "front": [
+            "B",
+            "F",
+            "G",
+            "H",
+            "J",
+            "L",
+            "M",
+            "N",
+            "P",
+            "R",
+            "S",
+            "T",
+            "V",
+            "W",
+            "Y"
+          ],
+          "back": [
+            "A",
+            "H"
+          ]
+        },
+        {
+          "word": "EW",
+          "front": [
+            "D",
+            "E",
+            "F",
+            "H",
+            "M",
+            "N",
+            "P",
+            "S",
+            "T",
+            "Y"
+          ],
+          "back": [
+            "E"
+          ]
+        },
+        {
+          "word": "EX",
+          "front": [
+            "D",
+            "H",
+            "K",
+            "L",
+            "R",
+            "S",
+            "V"
+          ],
+          "back": []
+        },
+        {
+          "word": "FA",
+          "front": [],
+          "back": [
+            "B",
+            "D",
+            "G",
+            "H",
+            "M",
+            "N",
+            "R",
+            "S",
+            "T",
+            "V",
+            "X",
+            "Y"
+          ]
+        },
+        {
+          "word": "FE",
+          "front": [],
+          "back": [
+            "D",
+            "E",
+            "H",
+            "M",
+            "N",
+            "R",
+            "S",
+            "T",
+            "U",
+            "W",
+            "Y",
+            "Z"
+          ]
+        },
+        {
+          "word": "GI",
+          "front": [],
+          "back": [
+            "B",
+            "D",
+            "E",
+            "F",
+            "G",
+            "N",
+            "P",
+            "S",
+            "T"
+          ]
+        },
+        {
+          "word": "GO",
+          "front": [
+            "A",
+            "E"
+          ],
+          "back": [
+            "A",
+            "B",
+            "D",
+            "O",
+            "R",
+            "S",
+            "T",
+            "X",
+            "Y"
+          ]
+        },
+        {
+          "word": "HA",
+          "front": [
+            "A",
+            "S",
+            "W"
+          ],
+          "back": [
+            "D",
+            "E",
+            "G",
+            "H",
+            "J",
+            "M",
+            "O",
+            "P",
+            "S",
+            "T",
+            "W",
+            "Y"
+          ]
+        },
+        {
+          "word": "HE",
+          "front": [
+            "S",
+            "T"
+          ],
+          "back": [
+            "H",
+            "M",
+            "N",
+            "P",
+            "R",
+            "S",
+            "T",
+            "W",
+            "X",
+            "Y"
+          ]
+        },
+        {
+          "word": "HI",
+          "front": [
+            "A",
+            "C",
+            "G",
+            "K",
+            "P"
+          ],
+          "back": [
+            "C",
+            "D",
+            "E",
+            "M",
+            "N",
+            "P",
+            "S",
+            "T"
+          ]
+        },
+        {
+          "word": "HM",
+          "front": [
+            "O"
+          ],
+          "back": [
+            "M"
+          ]
+        },
+        {
+          "word": "HO",
+          "front": [
+            "M",
+            "O",
+            "P",
+            "R",
+            "S",
+            "T",
+            "W"
+          ],
+          "back": [
+            "B",
+            "D",
+            "E",
+            "G",
+            "M",
+            "N",
+            "O",
+            "P",
+            "S",
+            "T",
+            "W",
+            "Y"
+          ]
+        },
+        {
+          "word": "ID",
+          "front": [
+            "A",
+            "B",
+            "D",
+            "F",
+            "G",
+            "H",
+            "K",
+            "L",
+            "M",
+            "R",
+            "V"
+          ],
+          "back": [
+            "S"
+          ]
+        },
+        {
+          "word": "IF",
+          "front": [
+            "D",
+            "G",
+            "K",
+            "R"
+          ],
+          "back": [
+            "F",
+            "S"
+          ]
+        },
+        {
+          "word": "IN",
+          "front": [
+            "A",
+            "B",
+            "D",
+            "F",
+            "G",
+            "H",
+            "J",
+            "K",
+            "L",
+            "P",
+            "R",
+            "S",
+            "T",
+            "V",
+            "W",
+            "Y",
+            "Z"
+          ],
+          "back": [
+            "K",
+            "N",
+            "S"
+          ]
+        },
+        {
+          "word": "IS",
+          "front": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "G",
+            "H",
+            "K",
+            "L",
+            "M",
+            "P",
+            "Q",
+            "S",
+            "T",
+            "V",
+            "W",
+            "X"
+          ],
+          "back": [
+            "M"
+          ]
+        },
+        {
+          "word": "IT",
+          "front": [
+            "A",
+            "B",
+            "D",
+            "F",
+            "G",
+            "H",
+            "K",
+            "L",
+            "N",
+            "P",
+            "S",
+            "T",
+            "W",
+            "Z"
+          ],
+          "back": [
+            "S"
+          ]
+        },
+        {
+          "word": "JO",
+          "front": [],
+          "back": [
+            "B",
+            "E",
+            "G",
+            "T",
+            "W",
+            "Y"
+          ]
+        },
+        {
+          "word": "KA",
+          "front": [
+            "O",
+            "S"
+          ],
+          "back": [
+            "B",
+            "E",
+            "F",
+            "S",
+            "T",
+            "Y"
+          ]
+        },
+        {
+          "word": "KI",
+          "front": [
+            "S"
+          ],
+          "back": [
+            "D",
+            "F",
+            "N",
+            "P",
+            "R",
+            "S",
+            "T"
+          ]
+        },
+        {
+          "word": "LA",
+          "front": [
+            "A"
+          ],
+          "back": [
+            "B",
+            "C",
+            "D",
+            "G",
+            "H",
+            "M",
+            "P",
+            "R",
+            "S",
+            "T",
+            "V",
+            "W",
+            "X",
+            "Y"
+          ]
+        },
+        {
+          "word": "LI",
+          "front": [],
+          "back": [
+            "B",
+            "D",
+            "E",
+            "N",
+            "P",
+            "S",
+            "T"
+          ]
+        },
+        {
+          "word": "LO",
+          "front": [],
+          "back": [
+            "B",
+            "C",
+            "G",
+            "O",
+            "P",
+            "R",
+            "T",
+            "W",
+            "X"
+          ]
+        },
+        {
+          "word": "MA",
+          "front": [
+            "A",
+            "O"
+          ],
+          "back": [
+            "C",
+            "D",
+            "E",
+            "G",
+            "M",
+            "N",
+            "P",
+            "R",
+            "S",
+            "T",
+            "W",
+            "X",
+            "Y"
+          ]
+        },
+        {
+          "word": "ME",
+          "front": [
+            "E"
+          ],
+          "back": [
+            "D",
+            "G",
+            "H",
+            "L",
+            "M",
+            "N",
+            "S",
+            "T",
+            "W"
+          ]
+        },
+        {
+          "word": "MI",
+          "front": [
+            "A"
+          ],
+          "back": [
+            "B",
+            "C",
+            "D",
+            "G",
+            "L",
+            "M",
+            "R",
+            "S",
+            "X"
+          ]
+        },
+        {
+          "word": "MM",
+          "front": [
+            "H",
+            "M",
+            "U"
+          ],
+          "back": [
+            "M"
+          ]
+        },
+        {
+          "word": "MO",
+          "front": [
+            "E"
+          ],
+          "back": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "G",
+            "I",
+            "L",
+            "M",
+            "N",
+            "O",
+            "P",
+            "R",
+            "S",
+            "T",
+            "W"
+          ]
+        },
+        {
+          "word": "MU",
+          "front": [
+            "A",
+            "E"
+          ],
+          "back": [
+            "D",
+            "G",
+            "M",
+            "N",
+            "S",
+            "T",
+            "X"
+          ]
+        },
+        {
+          "word": "MY",
+          "front": [],
+          "back": [
+            "C"
+          ]
+        },
+        {
+          "word": "NA",
+          "front": [
+            "A"
+          ],
+          "back": [
+            "B",
+            "E",
+            "G",
+            "H",
+            "M",
+            "N",
+            "P",
+            "V",
+            "W",
+            "Y"
+          ]
+        },
+        {
+          "word": "NE",
+          "front": [
+            "A",
+            "O"
+          ],
+          "back": [
+            "B",
+            "E",
+            "G",
+            "T",
+            "W"
+          ]
+        },
+        {
+          "word": "NO",
+          "front": [
+            "O"
+          ],
+          "back": [
+            "B",
+            "D",
+            "G",
+            "H",
+            "M",
+            "O",
+            "R",
+            "S",
+            "T",
+            "W"
+          ]
+        },
+        {
+          "word": "NU",
+          "front": [
+            "G"
+          ],
+          "back": [
+            "B",
+            "G",
+            "N",
+            "S",
+            "T"
+          ]
+        },
+        {
+          "word": "OD",
+          "front": [
+            "B",
+            "C",
+            "G",
+            "H",
+            "M",
+            "N",
+            "P",
+            "R",
+            "S",
+            "T",
+            "Y"
+          ],
+          "back": [
+            "A",
+            "D",
+            "E",
+            "S"
+          ]
+        },
+        {
+          "word": "OE",
+          "front": [
+            "D",
+            "F",
+            "H",
+            "J",
+            "R",
+            "T",
+            "V",
+            "W"
+          ],
+          "back": [
+            "S"
+          ]
+        },
+        {
+          "word": "OF",
+          "front": [
+            "O"
+          ],
+          "back": [
+            "F",
+            "T"
+          ]
+        },
+        {
+          "word": "OH",
+          "front": [
+            "D",
+            "F",
+            "N",
+            "O",
+            "P",
+            "S"
+          ],
+          "back": [
+            "M",
+            "O",
+            "S"
+          ]
+        },
+        {
+          "word": "OI",
+          "front": [
+            "K",
+            "M",
+            "P"
+          ],
+          "back": [
+            "K",
+            "L"
+          ]
+        },
+        {
+          "word": "OK",
+          "front": [
+            "W",
+            "Y"
+          ],
+          "back": [
+            "A",
+            "E"
+          ]
+        },
+        {
+          "word": "OM",
+          "front": [
+            "D",
+            "H",
+            "M",
+            "N",
+            "P",
+            "R",
+            "S",
+            "T",
+            "Y"
+          ],
+          "back": [
+            "A",
+            "S"
+          ]
+        },
+        {
+          "word": "ON",
+          "front": [
+            "C",
+            "D",
+            "E",
+            "F",
+            "H",
+            "I",
+            "M",
+            "S",
+            "T",
+            "W",
+            "Y"
+          ],
+          "back": [
+            "E",
+            "O",
+            "S"
+          ]
+        },
+        {
+          "word": "OP",
+          "front": [
+            "B",
+            "C",
+            "F",
+            "H",
+            "K",
+            "L",
+            "M",
+            "P",
+            "S",
+            "T"
+          ],
+          "back": [
+            "A",
+            "E",
+            "S",
+            "T"
+          ]
+        },
+        {
+          "word": "OR",
+          "front": [
+            "C",
+            "D",
+            "F",
+            "G",
+            "K",
+            "L",
+            "M",
+            "N",
+            "T"
+          ],
+          "back": [
+            "A",
+            "B",
+            "C",
+            "E",
+            "G",
+            "S",
+            "T"
+          ]
+        },
+        {
+          "word": "OS",
+          "front": [
+            "B",
+            "C",
+            "D",
+            "G",
+            "H",
+            "K",
+            "M",
+            "N",
+            "P",
+            "S",
+            "W"
+          ],
+          "back": [
+            "E"
+          ]
+        },
+        {
+          "word": "OW",
+          "front": [
+            "B",
+            "C",
+            "D",
+            "H",
+            "J",
+            "L",
+            "M",
+            "N",
+            "P",
+            "R",
+            "S",
+            "T",
+            "V",
+            "W",
+            "Y"
+          ],
+          "back": [
+            "E",
+            "L",
+            "N",
+            "T"
+          ]
+        },
+        {
+          "word": "OX",
+          "front": [
+            "B",
+            "C",
+            "D",
+            "F",
+            "G",
+            "L",
+            "P",
+            "S",
+            "V"
+          ],
+          "back": [
+            "O",
+            "Y"
+          ]
+        },
+        {
+          "word": "OY",
+          "front": [
+            "B",
+            "C",
+            "F",
+            "G",
+            "H",
+            "J",
+            "S",
+            "T"
+          ],
+          "back": []
+        },
+        {
+          "word": "PA",
+          "front": [
+            "O",
+            "S"
+          ],
+          "back": [
+            "C",
+            "D",
+            "H",
+            "K",
+            "L",
+            "M",
+            "N",
+            "P",
+            "R",
+            "S",
+            "T",
+            "W",
+            "X",
+            "Y"
+          ]
+        },
+        {
+          "word": "PE",
+          "front": [
+            "A",
+            "O"
+          ],
+          "back": [
+            "A",
+            "C",
+            "D",
+            "E",
+            "G",
+            "H",
+            "N",
+            "P",
+            "R",
+            "S",
+            "T",
+            "W"
+          ]
+        },
+        {
+          "word": "PI",
+          "front": [],
+          "back": [
+            "A",
+            "C",
+            "E",
+            "G",
+            "N",
+            "P",
+            "S",
+            "T",
+            "U",
+            "X"
+          ]
+        },
+        {
+          "word": "PO",
+          "front": [
+            "A",
+            "U"
+          ],
+          "back": [
+            "D",
+            "H",
+            "I",
+            "L",
+            "M",
+            "O",
+            "P",
+            "S",
+            "T",
+            "W",
+            "X"
+          ]
+        },
+        {
+          "word": "QI",
+          "front": [],
+          "back": [
+            "S"
+          ]
+        },
+        {
+          "word": "RE",
+          "front": [
+            "A",
+            "E",
+            "I",
+            "O"
+          ],
+          "back": [
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "I",
+            "M",
+            "P",
+            "S",
+            "T",
+            "V",
+            "X",
+            "Z"
+          ]
+        },
+        {
+          "word": "SH",
+          "front": [
+            "A"
+          ],
+          "back": [
+            "A",
+            "E",
+            "H",
+            "O",
+            "Y"
+          ]
+        },
+        {
+          "word": "SI",
+          "front": [
+            "P"
+          ],
+          "back": [
+            "B",
+            "C",
+            "G",
+            "M",
+            "N",
+            "P",
+            "R",
+            "S",
+            "T",
+            "X"
+          ]
+        },
+        {
+          "word": "SO",
+          "front": [],
+          "back": [
+            "B",
+            "C",
+            "D",
+            "H",
+            "L",
+            "M",
+            "N",
+            "P",
+            "S",
+            "T",
+            "U",
+            "W",
+            "X",
+            "Y"
+          ]
+        },
+        {
+          "word": "TA",
+          "front": [
+            "E",
+            "U"
+          ],
+          "back": [
+            "B",
+            "D",
+            "E",
+            "G",
+            "J",
+            "M",
+            "N",
+            "O",
+            "P",
+            "R",
+            "S",
+            "T",
+            "U",
+            "V",
+            "W",
+            "X"
+          ]
+        },
+        {
+          "word": "TE",
+          "front": [
+            "A",
+            "U"
+          ],
+          "back": [
+            "A",
+            "C",
+            "D",
+            "E",
+            "G",
+            "L",
+            "N",
+            "S",
+            "T",
+            "W"
+          ]
+        },
+        {
+          "word": "TI",
+          "front": [],
+          "back": [
+            "C",
+            "E",
+            "L",
+            "N",
+            "P",
+            "S",
+            "T",
+            "X",
+            "Z"
+          ]
+        },
+        {
+          "word": "TO",
+          "front": [],
+          "back": [
+            "D",
+            "E",
+            "G",
+            "M",
+            "N",
+            "O",
+            "P",
+            "R",
+            "T",
+            "W",
+            "Y"
+          ]
+        },
+        {
+          "word": "UH",
+          "front": [
+            "D",
+            "H"
+          ],
+          "back": []
+        },
+        {
+          "word": "UM",
+          "front": [
+            "B",
+            "C",
+            "D",
+            "G",
+            "H",
+            "L",
+            "M",
+            "R",
+            "S",
+            "T",
+            "V",
+            "Y"
+          ],
+          "back": [
+            "M",
+            "P",
+            "S"
+          ]
+        },
+        {
+          "word": "UN",
+          "front": [
+            "B",
+            "D",
+            "F",
+            "G",
+            "H",
+            "J",
+            "L",
+            "M",
+            "N",
+            "P",
+            "R",
+            "S",
+            "T"
+          ],
+          "back": [
+            "I",
+            "S"
+          ]
+        },
+        {
+          "word": "UP",
+          "front": [
+            "C",
+            "D",
+            "H",
+            "P",
+            "S",
+            "T",
+            "Y"
+          ],
+          "back": [
+            "O",
+            "S"
+          ]
+        },
+        {
+          "word": "US",
+          "front": [
+            "B",
+            "J",
+            "M",
+            "N",
+            "P",
+            "S"
+          ],
+          "back": [
+            "E"
+          ]
+        },
+        {
+          "word": "UT",
+          "front": [
+            "B",
+            "C",
+            "G",
+            "H",
+            "J",
+            "M",
+            "N",
+            "O",
+            "P",
+            "R",
+            "T"
+          ],
+          "back": [
+            "A",
+            "E",
+            "S"
+          ]
+        },
+        {
+          "word": "WE",
+          "front": [
+            "A",
+            "E",
+            "O"
+          ],
+          "back": [
+            "B",
+            "D",
+            "E",
+            "N",
+            "T"
+          ]
+        },
+        {
+          "word": "WO",
+          "front": [
+            "T"
+          ],
+          "back": [
+            "E",
+            "K",
+            "N",
+            "O",
+            "S",
+            "T",
+            "W"
+          ]
+        },
+        {
+          "word": "XI",
+          "front": [],
+          "back": [
+            "S"
+          ]
+        },
+        {
+          "word": "XU",
+          "front": [],
+          "back": []
+        },
+        {
+          "word": "YA",
+          "front": [
+            "P",
+            "R"
+          ],
+          "back": [
+            "G",
+            "H",
+            "K",
+            "M",
+            "P",
+            "R",
+            "S",
+            "W",
+            "Y"
+          ]
+        },
+        {
+          "word": "YE",
+          "front": [
+            "A",
+            "B",
+            "D",
+            "E",
+            "K",
+            "L",
+            "P",
+            "R",
+            "T",
+            "W"
+          ],
+          "back": [
+            "A",
+            "H",
+            "N",
+            "P",
+            "R",
+            "S",
+            "T",
+            "W",
+            "Z"
+          ]
+        },
+        {
+          "word": "YO",
+          "front": [],
+          "back": [
+            "B",
+            "D",
+            "K",
+            "M",
+            "N",
+            "U",
+            "W"
+          ]
+        },
+        {
+          "word": "ZA",
+          "front": [],
+          "back": [
+            "G",
+            "P",
+            "S",
+            "X"
+          ]
         }
       ]
     },
-    "2-to-4-xwords": {
-      "type": "recall",
-      "title": "2- to 4-Letter X Words",
-      "answers": [
-        "APEX",
-        "AX",
-        "AXAL",
-        "AXE",
-        "AXED",
-        "AXEL",
-        "AXES",
-        "AXIL",
-        "AXIS",
-        "AXLE",
-        "AXON",
-        "BOX",
-        "BOXY",
-        "BRUX",
-        "CALX",
-        "COAX",
-        "COX",
-        "COXA",
-        "CRUX",
-        "DEX",
-        "DEXY",
-        "DOUX",
-        "DOX",
-        "DOXX",
-        "DOXY",
-        "EAUX",
-        "EX",
-        "EXAM",
-        "EXEC",
-        "EXED",
-        "EXES",
-        "EXIT",
-        "EXON",
-        "EXPO",
-        "FALX",
-        "FAUX",
-        "FAX",
-        "FIX",
-        "FIXT",
-        "FLAX",
-        "FLEX",
-        "FLUX",
-        "FOLX",
-        "FOX",
-        "FOXY",
-        "GOX",
-        "HEX",
-        "HOAX",
-        "IBEX",
-        "ILEX",
-        "IXIA",
-        "JEUX",
-        "JINX",
-        "KEX",
-        "LAX",
-        "LEX",
-        "LOX",
-        "LUX",
-        "LUXE",
-        "LYNX",
-        "MAX",
-        "MAXI",
-        "MINX",
-        "MIX",
-        "MIXT",
-        "MOXA",
-        "MPOX",
-        "MUX",
-        "NEXT",
-        "NIX",
-        "NIXE",
-        "NIXY",
-        "ONYX",
-        "ORYX",
-        "OX",
-        "OXEN",
-        "OXER",
-        "OXES",
-        "OXIC",
-        "OXID",
-        "OXIM",
-        "OXO",
-        "OXY",
-        "PAX",
-        "PIX",
-        "PIXY",
-        "PLEX",
-        "POX",
-        "POXY",
-        "PREX",
-        "PYX",
-        "RAX",
-        "REX",
-        "ROUX",
-        "SAX",
-        "SEX",
-        "SEXT",
-        "SEXY",
-        "SIX",
-        "SOX",
-        "TAX",
-        "TAXA",
-        "TAXI",
-        "TEXT",
-        "TIX",
-        "TUX",
-        "VAX",
-        "VAXX",
-        "VEX",
-        "VEXT",
-        "VOX",
-        "WAX",
-        "WAXY",
-        "XED",
-        "XI",
-        "XIS",
-        "XU",
-        "XYST",
-        "ZAX"
-      ],
-      "missPenaltySeconds": 5
-    },
-    "2-letter-words": {
-      "type": "recall",
-      "title": "2-Letter Words",
-      "answers": [
-        "AA",
-        "AB",
-        "AD",
-        "AE",
-        "AG",
-        "AH",
-        "AI",
-        "AL",
-        "AM",
-        "AN",
-        "AR",
-        "AS",
-        "AT",
-        "AW",
-        "AX",
-        "AY",
-        "BA",
-        "BE",
-        "BI",
-        "BO",
-        "BY",
-        "DA",
-        "DE",
-        "DO",
-        "ED",
-        "EF",
-        "EH",
-        "EL",
-        "EM",
-        "EN",
-        "ER",
-        "ES",
-        "ET",
-        "EW",
-        "EX",
-        "FA",
-        "FE",
-        "GI",
-        "GO",
-        "HA",
-        "HE",
-        "HI",
-        "HM",
-        "HO",
-        "ID",
-        "IF",
-        "IN",
-        "IS",
-        "IT",
-        "JO",
-        "KA",
-        "KI",
-        "LA",
-        "LI",
-        "LO",
-        "MA",
-        "ME",
-        "MI",
-        "MM",
-        "MO",
-        "MU",
-        "MY",
-        "NA",
-        "NE",
-        "NO",
-        "NU",
-        "OD",
-        "OE",
-        "OF",
-        "OH",
-        "OI",
-        "OK",
-        "OM",
-        "ON",
-        "OP",
-        "OR",
-        "OS",
-        "OW",
-        "OX",
-        "OY",
-        "PA",
-        "PE",
-        "PI",
-        "PO",
-        "QI",
-        "RE",
-        "SH",
-        "SI",
-        "SO",
-        "TA",
-        "TE",
-        "TI",
-        "TO",
-        "UH",
-        "UM",
-        "UN",
-        "UP",
-        "US",
-        "UT",
-        "WE",
-        "WO",
-        "XI",
-        "XU",
-        "YA",
-        "YE",
-        "YO",
-        "ZA"
-      ],
-      "missPenaltySeconds": 5
-    },
-    "idumps": {
-      "type": "recall",
-      "title": "I Dumps",
-      "answers": [
-        "BIDI",
-        "BIKINI",
-        "BIMINI",
-        "HILI",
-        "IBIS",
-        "ILIA",
-        "IMID",
-        "IMIDIC",
-        "IMPI",
-        "INIA",
-        "INTI",
-        "IRID",
-        "IRIDIC",
-        "IRIS",
-        "IRITIC",
-        "IRITIS",
-        "IWIS",
-        "IXIA",
-        "KIWI",
-        "LIRI",
-        "MIDI",
-        "MINI",
-        "MIRI",
-        "NIDI",
-        "NISI",
-        "PIKI",
-        "PILI",
-        "TIKI",
-        "TIPI",
-        "TITI",
-        "WIKI",
-        "ZITI"
-      ],
-      "missPenaltySeconds": 5
-    },
-    "udumps": {
-      "type": "recall",
-      "title": "U Dumps",
-      "answers": [
-        "BUBU",
-        "FUGU",
-        "GURU",
-        "JUJU",
-        "JUKU",
-        "KUDU",
-        "KURU",
-        "LUAU",
-        "LULU",
-        "MUMU",
-        "MUUMUU",
-        "PUDU",
-        "PUPU",
-        "SULU",
-        "TUTU",
-        "ULU",
-        "ULUS",
-        "UNAU",
-        "URUS",
-        "YUZU"
-      ],
-      "missPenaltySeconds": 5
+    "3-to-4-ahooks": {
+      "type": "hooks",
+      "title": "3 to 4 A Hooks",
+      "puzzles": [
+        {
+          "word": "AAH",
+          "front": [
+            "W"
+          ],
+          "back": [
+            "S"
+          ]
+        },
+        {
+          "word": "AAL",
+          "front": [
+            "B"
+          ],
+          "back": [
+            "S"
+          ]
+        },
+        {
+          "word": "AAS",
+          "front": [
+            "B",
+            "K"
+          ],
+          "back": []
+        },
+        {
+          "word": "ABA",
+          "front": [
+            "B"
+          ],
+          "back": [
+            "S"
+          ]
+        },
+        {
+          "word": "ABS",
+          "front": [
+            "C",
+            "D",
+            "F",
+            "G",
+            "J",
+            "K",
+            "L",
+            "N",
+            "S",
+            "T",
+            "W"
+          ],
+          "back": []
+        },
+        {
+          "word": "ABY",
+          "front": [
+            "B",
+            "G"
+          ],
+          "back": [
+            "E",
+            "S"
+          ]
+        },
+        {
+          "word": "ACE",
+          "front": [
+            "D",
+            "F",
+            "L",
+            "M",
+            "P",
+            "R",
+            "T"
+          ],
+          "back": [
+            "D",
+            "S"
+          ]
+        },
+        {
+          "word": "ACK",
+          "front": [
+            "B",
+            "H",
+            "J",
+            "L",
+            "M",
+            "P",
+            "R",
+            "S",
+            "T",
+            "W",
+            "Y"
+          ],
+          "back": []
+        },
+        {
+          "word": "ACT",
+          "front": [
+            "F",
+            "P",
+            "T"
+          ],
+          "back": [
+            "A",
+            "S"
+          ]
+        },
+        {
+          "word": "ADD",
+          "front": [],
+          "back": [
+            "S"
+          ]
+        },
+        {
+          "word": "ADO",
+          "front": [
+            "D",
+            "F"
+          ],
+          "back": [
+            "S"
+          ]
+        },
+        {
+          "word": "ADS",
+          "front": [
+            "B",
+            "C",
+            "D",
+            "F",
+            "G",
+            "L",
+            "M",
+            "P",
+            "R",
+            "T",
+            "W"
+          ],
+          "back": []
+        },
+        {
+          "word": "ADZ",
+          "front": [],
+          "back": [
+            "E"
+          ]
+        },
+        {
+          "word": "AFF",
+          "front": [
+            "B",
+            "C",
+            "D",
+            "F",
+            "G",
+            "N",
+            "R",
+            "W",
+            "Y"
+          ],
+          "back": []
+        },
+        {
+          "word": "AFT",
+          "front": [
+            "D",
+            "H",
+            "R",
+            "W"
+          ],
+          "back": []
+        },
+        {
+          "word": "AGA",
+          "front": [
+            "G",
+            "N",
+            "R",
+            "S"
+          ],
+          "back": [
+            "R",
+            "S"
+          ]
+        },
+        {
+          "word": "AGE",
+          "front": [
+            "C",
+            "G",
+            "M",
+            "P",
+            "R",
+            "S",
+            "W",
+            "Y"
+          ],
+          "back": [
+            "D",
+            "E",
+            "R",
+            "S"
+          ]
+        },
+        {
+          "word": "AGO",
+          "front": [
+            "S"
+          ],
+          "back": [
+            "G",
+            "N"
+          ]
+        },
+        {
+          "word": "AGS",
+          "front": [
+            "B",
+            "D",
+            "F",
+            "G",
+            "H",
+            "J",
+            "L",
+            "M",
+            "N",
+            "R",
+            "S",
+            "T",
+            "W",
+            "Y",
+            "Z"
+          ],
+          "back": []
+        },
+        {
+          "word": "AHA",
+          "front": [
+            "H"
+          ],
+          "back": []
+        },
+        {
+          "word": "AHI",
+          "front": [],
+          "back": [
+            "S"
+          ]
+        },
+        {
+          "word": "AHS",
+          "front": [
+            "A",
+            "D",
+            "F",
+            "H",
+            "L"
+          ],
+          "back": []
+        },
+        {
+          "word": "AID",
+          "front": [
+            "C",
+            "L",
+            "M",
+            "P",
+            "Q",
+            "R",
+            "S"
+          ],
+          "back": [
+            "E",
+            "S"
+          ]
+        },
+        {
+          "word": "AIL",
+          "front": [
+            "B",
+            "F",
+            "H",
+            "J",
+            "K",
+            "M",
+            "N",
+            "P",
+            "R",
+            "S",
+            "T",
+            "V",
+            "W"
+          ],
+          "back": [
+            "S"
+          ]
+        },
+        {
+          "word": "AIM",
+          "front": [
+            "M"
+          ],
+          "back": [
+            "S"
+          ]
+        },
+        {
+          "word": "AIN",
+          "front": [
+            "C",
+            "F",
+            "G",
+            "K",
+            "L",
+            "M",
+            "P",
+            "R",
+            "S",
+            "T",
+            "V",
+            "W"
+          ],
+          "back": [
+            "S"
+          ]
+        },
+        {
+          "word": "AIR",
+          "front": [
+            "F",
+            "H",
+            "L",
+            "M",
+            "P",
+            "V",
+            "W"
+          ],
+          "back": [
+            "N",
+            "S",
+            "T",
+            "Y"
+          ]
+        },
+        {
+          "word": "AIS",
+          "front": [
+            "D",
+            "R"
+          ],
+          "back": []
+        },
+        {
+          "word": "AIT",
+          "front": [
+            "B",
+            "G",
+            "W"
+          ],
+          "back": [
+            "S"
+          ]
+        },
+        {
+          "word": "AJI",
+          "front": [
+            "H"
+          ],
+          "back": [
+            "S"
+          ]
+        },
+        {
+          "word": "ALA",
+          "front": [
+            "G",
+            "N",
+            "T"
+          ],
+          "back": [
+            "E",
+            "N",
+            "R",
+            "S"
+          ]
+        },
+        {
+          "word": "ALB",
+          "front": [],
+          "back": [
+            "A",
+            "S"
+          ]
+        },
+        {
+          "word": "ALE",
+          "front": [
+            "B",
+            "D",
+            "G",
+            "H",
+            "K",
+            "M",
+            "P",
+            "R",
+            "S",
+            "T",
+            "V",
+            "W"
+          ],
+          "back": [
+            "C",
+            "E",
+            "F",
+            "S"
+          ]
+        },
+        {
+          "word": "ALL",
+          "front": [
+            "B",
+            "C",
+            "F",
+            "G",
+            "H",
+            "L",
+            "M",
+            "P",
+            "S",
+            "T",
+            "W"
+          ],
+          "back": [
+            "S",
+            "Y"
+          ]
+        },
+        {
+          "word": "ALP",
+          "front": [
+            "P",
+            "S"
+          ],
+          "back": [
+            "S"
+          ]
+        },
+        {
+          "word": "ALS",
+          "front": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "G",
+            "P",
+            "S"
+          ],
+          "back": [
+            "O"
+          ]
+        },
+        {
+          "word": "ALT",
+          "front": [
+            "H",
+            "M",
+            "S"
+          ],
+          "back": [
+            "O",
+            "S"
+          ]
+        },
+        {
+          "word": "AMA",
+          "front": [
+            "G",
+            "L",
+            "M"
+          ],
+          "back": [
+            "H",
+            "S"
+          ]
+        },
+        {
+          "word": "AMI",
+          "front": [
+            "C",
+            "K",
+            "R"
+          ],
+          "back": [
+            "A",
+            "D",
+            "E",
+            "N",
+            "R",
+            "S"
+          ]
+        },
+        {
+          "word": "AMP",
+          "front": [
+            "C",
+            "D",
+            "G",
+            "L",
+            "R",
+            "S",
+            "T",
+            "V"
+          ],
+          "back": [
+            "S"
+          ]
+        },
+        {
+          "word": "AMU",
+          "front": [],
+          "back": [
+            "S"
+          ]
+        },
+        {
+          "word": "ANA",
+          "front": [
+            "K",
+            "M",
+            "N"
+          ],
+          "back": [
+            "L",
+            "S"
+          ]
+        },
+        {
+          "word": "AND",
+          "front": [
+            "B",
+            "H",
+            "L",
+            "R",
+            "S",
+            "W"
+          ],
+          "back": [
+            "S"
+          ]
+        },
+        {
+          "word": "ANE",
+          "front": [
+            "B",
+            "C",
+            "F",
+            "G",
+            "J",
+            "K",
+            "L",
+            "M",
+            "P",
+            "S",
+            "V",
+            "W"
+          ],
+          "back": [
+            "S",
+            "W"
+          ]
+        },
+        {
+          "word": "ANI",
+          "front": [
+            "B",
+            "M",
+            "R"
+          ],
+          "back": [
+            "L",
+            "S"
+          ]
+        },
+        {
+          "word": "ANT",
+          "front": [
+            "C",
+            "H",
+            "P",
+            "R",
+            "W"
+          ],
+          "back": [
+            "A",
+            "E",
+            "I",
+            "S"
+          ]
+        },
+        {
+          "word": "ANY",
+          "front": [
+            "M",
+            "W",
+            "Z"
+          ],
+          "back": []
+        },
+        {
+          "word": "APE",
+          "front": [
+            "C",
+            "G",
+            "J",
+            "N",
+            "R",
+            "T",
+            "V"
+          ],
+          "back": [
+            "D",
+            "R",
+            "S",
+            "X"
+          ]
+        },
+        {
+          "word": "APO",
+          "front": [
+            "C"
+          ],
+          "back": [
+            "D",
+            "S"
+          ]
+        },
+        {
+          "word": "APP",
+          "front": [],
+          "back": [
+            "S"
+          ]
+        },
+        {
+          "word": "APT",
+          "front": [
+            "R"
+          ],
+          "back": []
+        },
+        {
+          "word": "ARB",
+          "front": [
+            "B",
+            "C",
+            "D",
+            "G"
+          ],
+          "back": [
+            "S"
+          ]
+        },
+        {
+          "word": "ARC",
+          "front": [
+            "M",
+            "N"
+          ],
+          "back": [
+            "H",
+            "O",
+            "S"
+          ]
+        },
+        {
+          "word": "ARE",
+          "front": [
+            "B",
+            "C",
+            "D",
+            "F",
+            "H",
+            "M",
+            "N",
+            "P",
+            "R",
+            "T",
+            "W",
+            "Y"
+          ],
+          "back": [
+            "A",
+            "G",
+            "S"
+          ]
+        },
+        {
+          "word": "ARF",
+          "front": [
+            "B",
+            "Z"
+          ],
+          "back": [
+            "S"
+          ]
+        },
+        {
+          "word": "ARK",
+          "front": [
+            "B",
+            "C",
+            "D",
+            "H",
+            "L",
+            "M",
+            "N",
+            "P",
+            "S",
+            "W"
+          ],
+          "back": [
+            "S"
+          ]
+        },
+        {
+          "word": "ARM",
+          "front": [
+            "B",
+            "F",
+            "H",
+            "W"
+          ],
+          "back": [
+            "S",
+            "Y"
+          ]
+        },
+        {
+          "word": "ARO",
+          "front": [
+            "F",
+            "T"
+          ],
+          "back": [
+            "S"
+          ]
+        },
+        {
+          "word": "ARS",
+          "front": [
+            "B",
+            "C",
+            "E",
+            "G",
+            "J",
+            "L",
+            "M",
+            "O",
+            "P",
+            "T",
+            "V",
+            "W"
+          ],
+          "back": [
+            "E"
+          ]
+        },
+        {
+          "word": "ART",
+          "front": [
+            "C",
+            "D",
+            "F",
+            "H",
+            "K",
+            "M",
+            "P",
+            "T",
+            "W"
+          ],
+          "back": [
+            "S",
+            "Y"
+          ]
+        },
+        {
+          "word": "ASH",
+          "front": [
+            "B",
+            "C",
+            "D",
+            "F",
+            "G",
+            "H",
+            "L",
+            "M",
+            "P",
+            "R",
+            "S",
+            "W"
+          ],
+          "back": [
+            "Y"
+          ]
+        },
+        {
+          "word": "ASK",
+          "front": [
+            "B",
+            "C",
+            "M",
+            "T"
+          ],
+          "back": [
+            "S"
+          ]
+        },
+        {
+          "word": "ASP",
+          "front": [
+            "G",
+            "H",
+            "R",
+            "W"
+          ],
+          "back": [
+            "S"
+          ]
+        },
+        {
+          "word": "ASS",
+          "front": [
+            "B",
+            "L",
+            "M",
+            "P",
+            "S",
+            "T"
+          ],
+          "back": []
+        },
+        {
+          "word": "ATE",
+          "front": [
+            "B",
+            "C",
+            "D",
+            "F",
+            "G",
+            "H",
+            "L",
+            "M",
+            "P",
+            "R",
+            "S",
+            "T"
+          ],
+          "back": [
+            "S"
+          ]
+        },
+        {
+          "word": "ATT",
+          "front": [
+            "B",
+            "M",
+            "W"
+          ],
+          "back": []
+        },
+        {
+          "word": "AUK",
+          "front": [
+            "J",
+            "W"
+          ],
+          "back": [
+            "S"
+          ]
+        },
+        {
+          "word": "AVA",
+          "front": [
+            "C",
+            "F",
+            "J",
+            "K",
+            "L"
+          ],
+          "back": []
+        },
+        {
+          "word": "AVE",
+          "front": [
+            "C",
+            "E",
+            "F",
+            "G",
+            "H",
+            "L",
+            "N",
+            "P",
+            "R",
+            "S",
+            "W"
+          ],
+          "back": [
+            "R",
+            "S"
+          ]
+        },
+        {
+          "word": "AVO",
+          "front": [],
+          "back": [
+            "S",
+            "W"
+          ]
+        },
+        {
+          "word": "AWA",
+          "front": [],
+          "back": [
+            "Y"
+          ]
+        },
+        {
+          "word": "AWE",
+          "front": [],
+          "back": [
+            "D",
+            "E",
+            "S"
+          ]
+        },
+        {
+          "word": "AWL",
+          "front": [
+            "B",
+            "P",
+            "W",
+            "Y"
+          ],
+          "back": [
+            "S"
+          ]
+        },
+        {
+          "word": "AWN",
+          "front": [
+            "B",
+            "D",
+            "F",
+            "L",
+            "M",
+            "P",
+            "S",
+            "Y"
+          ],
+          "back": [
+            "S",
+            "Y"
+          ]
+        },
+        {
+          "word": "AXE",
+          "front": [],
+          "back": [
+            "D",
+            "L",
+            "S"
+          ]
+        },
+        {
+          "word": "AYE",
+          "front": [],
+          "back": [
+            "S"
+          ]
+        },
+        {
+          "word": "AYS",
+          "front": [
+            "B",
+            "C",
+            "D",
+            "F",
+            "G",
+            "H",
+            "J",
+            "K",
+            "L",
+            "M",
+            "N",
+            "P",
+            "R",
+            "S",
+            "W",
+            "Y"
+          ],
+          "back": []
+        },
+        {
+          "word": "AZO",
+          "front": [],
+          "back": [
+            "N"
+          ]
+        }
+      ]
     }
   }
 }
