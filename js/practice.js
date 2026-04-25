@@ -66,15 +66,16 @@ function drawList(perm) {
   body.innerHTML = filtered.map(([slug, p]) => {
     const best = getPersonalBest(`permanent:${slug}`);
     const bestText = best
-      ? `Best: ${best.correct}/${best.total} (${Math.round((best.correct / best.total) * 100)}%) in ${formatTime(best.timeSeconds)} · ${best.attempts} attempts`
+      ? `${best.correct}/${best.total} · ${Math.round((best.correct / best.total) * 100)}% · ${formatTime(best.timeSeconds)}`
       : "Not yet attempted";
     return `
       <li>
-        <div>
-          <strong>${escapeHtml(p.title)}</strong>
-          <div class="meta"><span class="pill">${p.type}</span> · ${escapeHtml(bestText)}</div>
+        <div class="title-row"><strong>${escapeHtml(p.title)}</strong></div>
+        <div class="action-row">
+          <span class="pill">${p.type}</span>
+          <button data-slug="${escapeHtml(slug)}">Play</button>
         </div>
-        <button data-slug="${escapeHtml(slug)}">Play</button>
+        <div class="meta">${escapeHtml(bestText)}</div>
       </li>
     `;
   }).join("");

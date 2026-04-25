@@ -503,7 +503,9 @@ form#name-form {
 
 /* Practice list */
 body.practice-page main#app,
-body.practice-page footer {
+body.practice-page footer,
+body.leaderboards-page main#app,
+body.leaderboards-page footer {
   max-width: 1100px;
 }
 .practice-list {
@@ -519,15 +521,67 @@ body.practice-page footer {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.practice-list .title-row strong {
+  font-family: var(--font-serif);
+}
+.practice-list .action-row {
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
+  gap: 8px;
 }
 .practice-list .meta {
   font-size: 13px;
   color: var(--ink-muted);
+  margin-top: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
+.practice-list li button {
+  padding: 6px 14px;
+  font-size: 14px;
+}
+
+/* Leaderboards grid */
+.boards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 8px;
+  margin-top: 16px;
+}
+.board-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.board-card details { padding: 12px; }
+.board-card summary {
+  cursor: pointer;
+  list-style: none;
+}
+.board-card summary::-webkit-details-marker { display: none; }
+.board-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+.board-card-title { font-weight: 600; font-family: var(--font-serif); }
+.board-card-row { font-size: 13px; margin: 2px 0; }
+.board-row-label {
+  display: inline-block;
+  min-width: 32px;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  letter-spacing: 0.05em;
+}
+.board-card .board-table { margin-top: 10px; }
+.board-card[open] summary { margin-bottom: 4px; }
 
 /* Admin list */
 .admin-list { list-style: none; padding: 0; margin: 12px 0 0; }
