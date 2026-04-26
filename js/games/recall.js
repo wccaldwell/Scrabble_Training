@@ -84,7 +84,7 @@ export function runRecallGame(root, week) {
       `;
 
       const input = root.querySelector("#guess-input");
-      input?.focus();
+      input?.focus({ preventScroll: true });
       root.querySelector("#guess-form").addEventListener("submit", onGuess);
       root.querySelector("#giveup-btn").addEventListener("click", onGiveUp);
     }
