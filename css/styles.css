@@ -232,13 +232,9 @@ form#name-form {
   margin-bottom: 12px;
 }
 .recall-card .recall-input-wrap {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  z-index: 5;
   background: var(--surface);
-  margin: 0 -20px 12px;
-  padding: 8px 20px;
+  padding: 8px 0;
+  margin-bottom: 12px;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
 }
@@ -256,10 +252,26 @@ form#name-form {
   font-size: 13px;
   text-align: right;
 }
-@media (max-width: 520px) {
-  .recall-card .recall-input-wrap {
-    margin: 0 -16px 12px;
-    padding: 8px 16px;
+
+/* Mobile: contain scrolling inside the slot grid so the input bar never
+   leaves the screen, regardless of keyboard or browser quirks. */
+@media (max-width: 720px) {
+  .recall-card {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 60px);
+    height: calc(100dvh - 60px);
+    max-height: calc(100vh - 60px);
+    max-height: calc(100dvh - 60px);
+  }
+  .recall-card .game-status,
+  .recall-card .recall-input-wrap,
+  .recall-card .game-actions { flex: 0 0 auto; }
+  .recall-card .slot-grid {
+    flex: 1 1 0;
+    min-height: 0;
+    overflow-y: auto;
+    margin-bottom: 12px;
   }
 }
 .guess-row input {

@@ -100,23 +100,6 @@ export function runRecallGame(root, week) {
       els.input?.focus({ preventScroll: true });
       root.querySelector("#guess-form").addEventListener("submit", onGuess);
       root.querySelector("#giveup-btn").addEventListener("click", onGiveUp);
-      setupViewportPin();
-    }
-
-    function setupViewportPin() {
-      const vv = window.visualViewport;
-      if (!vv || !els.wrap) return;
-      const update = () => {
-        if (!els?.wrap) return;
-        els.wrap.style.top = `${vv.offsetTop}px`;
-      };
-      vv.addEventListener("resize", update);
-      vv.addEventListener("scroll", update);
-      state.detachViewportPin = () => {
-        vv.removeEventListener("resize", update);
-        vv.removeEventListener("scroll", update);
-      };
-      update();
     }
 
     function flash(text, kind) {
@@ -172,7 +155,6 @@ export function runRecallGame(root, week) {
     function finish() {
       state.finished = true;
       stopTimer();
-      state.detachViewportPin?.();
       const timeSeconds = Math.round(elapsedSeconds());
       const penaltySeconds = state.misses * penalty;
       const result = {
