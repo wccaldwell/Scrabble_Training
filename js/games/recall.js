@@ -65,11 +65,12 @@ export function runRecallGame(root, week) {
 
       root.innerHTML = `
         <div class="card recall-card">
-          <div class="recall-input-wrap">
-            <div class="game-status">
-              <span><strong id="found-count">${state.found.size}</strong> of ${total} found${penaltyNote}</span>
-              <span class="timer">${formatTime(currentTime())}</span>
-            </div>
+          <div class="game-status">
+            <span><strong id="found-count">${state.found.size}</strong> of ${total} found${penaltyNote}</span>
+            <span class="timer">${formatTime(currentTime())}</span>
+          </div>
+          ${description}
+          <div class="recall-input-wrap" id="recall-input-wrap">
             <form class="guess-row" id="guess-form" autocomplete="off">
               <input type="text" id="guess-input" placeholder="Type a word" autocomplete="off" autocapitalize="characters" spellcheck="false" />
               <button type="submit">Enter</button>
@@ -79,7 +80,6 @@ export function runRecallGame(root, week) {
               <span class="message" id="msg"></span>
             </div>
           </div>
-          ${description}
           <div class="slot-grid" id="slot-grid">${slotsHtml}</div>
           <div class="game-actions">
             <button type="button" id="giveup-btn">Give Up</button>
@@ -93,12 +93,30 @@ export function runRecallGame(root, week) {
         input: root.querySelector("#guess-input"),
         missesLine: root.querySelector("#misses-line"),
         slotGrid: root.querySelector("#slot-grid"),
-        timer: root.querySelector(".timer")
+        timer: root.querySelector(".timer"),
+        wrap: root.querySelector("#recall-input-wrap")
       };
 
       els.input?.focus({ preventScroll: true });
       root.querySelector("#guess-form").addEventListener("submit", onGuess);
       root.querySelector("#giveup-btn").addEventListener("click", onGiveUp);
+      setupViewportPin();
+    }
+
+    function setupViewportPin() {
+      const vv = window.visualViewport;
+      if (!vv || !els.wrap) return;
+      const update = () => {
+        if (!els?.wrap) return;
+        els.wrap.style.top = `${vv.offsetTop}px`;
+      };
+      vv.addEventListener("resize", update);
+      vv.addEventListener("scroll", update);
+      state.detachViewportPin = () => {
+        vv.removeEventListener("resize", update);
+        vv.removeEventListener("scroll", update);
+      };
+      update();
     }
 
     function flash(text, kind) {
@@ -154,6 +172,7 @@ export function runRecallGame(root, week) {
     function finish() {
       state.finished = true;
       stopTimer();
+      state.detachViewportPin?.();
       const timeSeconds = Math.round(elapsedSeconds());
       const penaltySeconds = state.misses * penalty;
       const result = {
