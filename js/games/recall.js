@@ -65,19 +65,21 @@ export function runRecallGame(root, week) {
 
       root.innerHTML = `
         <div class="card recall-card">
-          <div class="game-status">
-            <span><strong id="found-count">${state.found.size}</strong> of ${total} found${penaltyNote}</span>
-            <span class="timer">${formatTime(currentTime())}</span>
-          </div>
-          ${description}
           <div class="recall-input-wrap">
-            <div class="message" id="msg"></div>
+            <div class="game-status">
+              <span><strong id="found-count">${state.found.size}</strong> of ${total} found${penaltyNote}</span>
+              <span class="timer">${formatTime(currentTime())}</span>
+            </div>
             <form class="guess-row" id="guess-form" autocomplete="off">
               <input type="text" id="guess-input" placeholder="Type a word" autocomplete="off" autocapitalize="characters" spellcheck="false" />
               <button type="submit">Enter</button>
             </form>
-            <div class="muted" style="text-align:center;font-size:13px" id="misses-line">${missesText()}</div>
+            <div class="recall-input-foot">
+              <span class="muted" style="font-size:13px" id="misses-line">${missesText()}</span>
+              <span class="message" id="msg"></span>
+            </div>
           </div>
+          ${description}
           <div class="slot-grid" id="slot-grid">${slotsHtml}</div>
           <div class="game-actions">
             <button type="button" id="giveup-btn">Give Up</button>
