@@ -28,6 +28,7 @@ export function runRecallGame(root, week) {
     };
 
     const total = answerSet.size;
+    let els = null;
 
     render();
     tickTimer();
@@ -35,8 +36,7 @@ export function runRecallGame(root, week) {
     function tickTimer() {
       state.timerId = setInterval(() => {
         if (state.finished) return;
-        const el = root.querySelector(".timer");
-        if (el) el.textContent = formatTime(currentTime());
+        if (els?.timer) els.timer.textContent = formatTime(currentTime());
       }, 500);
     }
 
@@ -45,14 +45,17 @@ export function runRecallGame(root, week) {
     function elapsedSeconds() { return (Date.now() - state.startMs) / 1000; }
     function currentTime() { return elapsedSeconds() + state.misses * penalty; }
 
+    function missesText() {
+      return `Misses: ${state.misses}${penalty > 0 ? ` (+${formatTime(state.misses * penalty)} penalty)` : ""}`;
+    }
+
+    function slotHtml(w) {
+      const placeholder = "_".repeat(w.length);
+      return `<span class="slot blank" data-word="${w}" aria-label="unfilled slot">${placeholder}</span>`;
+    }
+
     function render() {
-      const slotsHtml = sortedAnswers.map(w => {
-        if (state.found.has(w)) {
-          return `<span class="slot found">${escapeHtml(w)}</span>`;
-        }
-        const placeholder = "_".repeat(w.length);
-        return `<span class="slot blank" aria-label="unfilled slot">${placeholder}</span>`;
-      }).join("");
+      const slotsHtml = sortedAnswers.map(slotHtml).join("");
       const description = week.description
         ? `<p class="muted" style="margin-top:0">${escapeHtml(week.description)}</p>`
         : "";
@@ -60,68 +63,88 @@ export function runRecallGame(root, week) {
         ? `<span class="muted"> · each miss adds ${penalty}s</span>`
         : "";
 
-      const msgText = root.dataset.lastMsg || "";
-      const msgKind = root.dataset.lastMsgKind || "";
-
       root.innerHTML = `
         <div class="card">
           <div class="game-status">
-            <span><strong>${state.found.size}</strong> of ${total} found${penaltyNote}</span>
+            <span><strong id="found-count">${state.found.size}</strong> of ${total} found${penaltyNote}</span>
             <span class="timer">${formatTime(currentTime())}</span>
           </div>
           ${description}
-          <div class="message ${escapeHtml(msgKind)}" id="msg">${escapeHtml(msgText)}</div>
+          <div class="message" id="msg"></div>
           <form class="guess-row" id="guess-form" autocomplete="off">
             <input type="text" id="guess-input" placeholder="Type a word" autocomplete="off" autocapitalize="characters" spellcheck="false" />
             <button type="submit">Enter</button>
           </form>
-          <div class="muted" style="text-align:center;font-size:13px">Misses: ${state.misses}${penalty > 0 ? ` (+${formatTime(state.misses * penalty)} penalty)` : ""}</div>
-          <div class="slot-grid">${slotsHtml}</div>
+          <div class="muted" style="text-align:center;font-size:13px" id="misses-line">${missesText()}</div>
+          <div class="slot-grid" id="slot-grid">${slotsHtml}</div>
           <div class="game-actions">
             <button type="button" id="giveup-btn">Give Up</button>
           </div>
         </div>
       `;
 
-      const input = root.querySelector("#guess-input");
-      input?.focus({ preventScroll: true });
+      els = {
+        foundCount: root.querySelector("#found-count"),
+        msg: root.querySelector("#msg"),
+        input: root.querySelector("#guess-input"),
+        missesLine: root.querySelector("#misses-line"),
+        slotGrid: root.querySelector("#slot-grid"),
+        timer: root.querySelector(".timer")
+      };
+
+      els.input?.focus({ preventScroll: true });
       root.querySelector("#guess-form").addEventListener("submit", onGuess);
       root.querySelector("#giveup-btn").addEventListener("click", onGiveUp);
     }
 
+    function flash(text, kind) {
+      if (!els?.msg) return;
+      els.msg.className = `message ${kind || ""}`;
+      els.msg.textContent = text;
+    }
+
+    function markFound(word) {
+      if (!els) return;
+      const slot = els.slotGrid.querySelector(`.slot[data-word="${word}"]`);
+      if (slot) {
+        slot.className = "slot found";
+        slot.removeAttribute("aria-label");
+        slot.textContent = word;
+      }
+      if (els.foundCount) els.foundCount.textContent = state.found.size;
+    }
+
+    function updateMisses() {
+      if (els?.missesLine) els.missesLine.textContent = missesText();
+    }
+
     function onGuess(e) {
       e.preventDefault();
-      const input = root.querySelector("#guess-input");
+      const input = els.input;
       const raw = (input.value || "").trim().toUpperCase().replace(/\s+/g, "");
+      input.value = "";
       if (!raw) return;
 
       if (state.found.has(raw)) {
         flash("Already found.", "");
       } else if (answerSet.has(raw)) {
         state.found.add(raw);
+        markFound(raw);
         flash(`✓ ${raw}`, "ok");
         if (state.found.size >= total) {
-          input.value = "";
           finish();
           return;
         }
       } else {
         state.misses++;
+        updateMisses();
         flash(penalty > 0 ? `✗ Incorrect (+${penalty}s)` : `✗ Incorrect`, "bad");
       }
-      input.value = "";
-      render();
     }
 
     function onGiveUp() {
       if (!confirm("Give up now? Your score will be recorded.")) return;
       finish();
-    }
-
-    function flash(text, kind) {
-      // Stash so we can re-insert after render.
-      root.dataset.lastMsg = text;
-      root.dataset.lastMsgKind = kind || "";
     }
 
     function finish() {
