@@ -356,12 +356,13 @@ form#name-form {
   font-size: 14px;
   cursor: pointer;
 }
-.hook-btn:hover:not(:disabled) {
+.hook-btn:not(.selected):hover:not(:disabled) {
   border-color: var(--accent);
   background: #fff;
   filter: none;
 }
-.hook-btn.selected {
+.hook-btn.selected,
+.hook-btn.selected:hover:not(:disabled) {
   background: var(--tile);
   border-color: #b68a2e;
   box-shadow: 0 1px 0 #b68a2e;
