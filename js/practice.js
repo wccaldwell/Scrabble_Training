@@ -7,6 +7,8 @@ import { runRecallGame } from "./games/recall.js";
 
 const $ = sel => document.querySelector(sel);
 
+let cachedRows = null;
+
 init().catch(err => {
   console.error(err);
   document.querySelector("#app").innerHTML = `<div class="card"><h2>Something went wrong</h2><p class="muted">${escapeHtml(String(err))}</p></div>`;
@@ -20,9 +22,12 @@ async function init() {
     return;
   }
 
-  const puzzles = await (await fetch("data/puzzles.json", { cache: "no-store" })).json();
-  const perm = puzzles.permanent || {};
-  renderList(perm);
+  const [puzzles, rows] = await Promise.all([
+    fetch("data/puzzles.json", { cache: "no-store" }).then(r => r.json()),
+    fetchRows().catch(err => { console.error(err); return null; })
+  ]);
+  cachedRows = rows;
+  renderList(puzzles.permanent || {});
 }
 
 function renderList(perm) {
@@ -44,11 +49,15 @@ function wireFilters(perm) {
 
 function drawList(perm) {
   const body = $("#practice-list-body");
+  const empty = $("#practice-list-empty");
   const entries = Object.entries(perm);
   if (entries.length === 0) {
-    body.innerHTML = `<li class="muted">No practice puzzles yet.</li>`;
+    body.innerHTML = "";
+    empty.textContent = "No practice puzzles yet.";
+    empty.classList.remove("hidden");
     return;
   }
+
   const activeType = $("#type-filter").querySelector(".filter-pill.active")?.dataset.type || "all";
   const unattemptedOnly = $("#unattempted-only").checked;
 
@@ -59,30 +68,95 @@ function drawList(perm) {
   });
 
   if (filtered.length === 0) {
-    body.innerHTML = `<li class="muted">No puzzles match the current filter.</li>`;
+    body.innerHTML = "";
+    empty.textContent = "No puzzles match the current filter.";
+    empty.classList.remove("hidden");
     return;
   }
+  empty.classList.add("hidden");
 
-  body.innerHTML = filtered.map(([slug, p]) => {
-    const best = getPersonalBest(`permanent:${slug}`);
-    const bestText = best
-      ? `${best.correct}/${best.total} · ${Math.round((best.correct / best.total) * 100)}% · ${formatTime(best.timeSeconds)}`
-      : "Not yet attempted";
-    return `
-      <li>
-        <div class="title-row"><strong>${escapeHtml(p.title)}</strong></div>
-        <div class="action-row">
-          <span class="pill">${p.type}</span>
-          <button data-slug="${escapeHtml(slug)}">Play</button>
-        </div>
-        <div class="meta">${escapeHtml(bestText)}</div>
-      </li>
-    `;
-  }).join("");
+  const you = getName();
+  const youKey = you ? you.trim().toLowerCase() : "";
 
-  body.querySelectorAll("button[data-slug]").forEach(btn => {
-    btn.addEventListener("click", () => startPuzzle(btn.dataset.slug, perm[btn.dataset.slug]));
+  body.innerHTML = filtered.map(([slug, p]) => buildCard(slug, p, cachedRows, you, youKey)).join("");
+
+  body.querySelectorAll(".board-card").forEach(card => {
+    const slug = card.dataset.slug;
+    const details = card.querySelector("details");
+    const toggleBtn = card.querySelector(".expand-toggle");
+    const playBtn = card.querySelector(".play-btn");
+
+    if (details && toggleBtn) {
+      toggleBtn.addEventListener("click", e => {
+        e.preventDefault();
+        details.open = !details.open;
+      });
+      details.addEventListener("toggle", () => {
+        if (!details.open) return;
+        const tableEl = details.querySelector(".board-table");
+        if (tableEl.dataset.loaded === "1") return;
+        const ranked = cachedRows ? rankPermanentBestPerPlayer(cachedRows, `permanent:${slug}`) : [];
+        renderTable(tableEl, ranked, { youName: you });
+        tableEl.dataset.loaded = "1";
+      });
+    }
+
+    if (playBtn) {
+      playBtn.addEventListener("click", e => {
+        e.stopPropagation();
+        startPuzzle(slug, perm[slug]);
+      });
+    }
   });
+}
+
+function buildCard(slug, puzzle, rows, you, youKey) {
+  const ranked = rows ? rankPermanentBestPerPlayer(rows, `permanent:${slug}`) : [];
+  const top = ranked[0];
+  const youIdx = youKey
+    ? ranked.findIndex(r => r.name.trim().toLowerCase() === youKey)
+    : -1;
+  const yourEntry = youIdx >= 0 ? ranked[youIdx] : null;
+  const personalBest = getPersonalBest(`permanent:${slug}`);
+  const hasPlayed = !!(yourEntry || personalBest);
+
+  const topLine = top
+    ? `<span class="board-row-label">Top</span> <strong>${escapeHtml(top.name)}</strong> · ${top.correct}/${top.total} · ${formatTime(top.timeSeconds)}`
+    : `<span class="muted">No scores yet — be the first!</span>`;
+
+  let youLine;
+  if (!you) {
+    youLine = `<span class="muted">Set your name to track your scores</span>`;
+  } else if (yourEntry) {
+    youLine = `<span class="board-row-label">You</span> #${youIdx + 1} · ${yourEntry.correct}/${yourEntry.total} · ${formatTime(yourEntry.timeSeconds)} <span class="pb-badge">your best</span>`;
+  } else if (personalBest) {
+    youLine = `<span class="board-row-label">You</span> ${personalBest.correct}/${personalBest.total} · ${formatTime(personalBest.timeSeconds)} <span class="pb-badge">your best</span>`;
+  } else {
+    youLine = `<span class="board-row-label">You</span> <span class="muted">Not yet attempted</span> <span class="untried-badge">new to you</span>`;
+  }
+
+  const pill = puzzle.type ? `<span class="pill">${escapeHtml(puzzle.type)}</span>` : "";
+  const title = escapeHtml(puzzle.title || slug);
+  const playLabel = hasPlayed ? "Play again" : "Play";
+  return `
+    <article class="board-card" data-type="${escapeHtml(puzzle.type || "")}" data-slug="${escapeHtml(slug)}">
+      <details>
+        <summary>
+          <div class="board-card-head">
+            <div class="board-card-title">${title}</div>
+            ${pill}
+          </div>
+          <div class="board-card-row">${topLine}</div>
+          <div class="board-card-row">${youLine}</div>
+        </summary>
+        <div class="board-table muted">Loading…</div>
+      </details>
+      <div class="board-card-foot">
+        <button class="play-btn" type="button">${playLabel}</button>
+        <button class="expand-toggle" type="button"><span class="toggle-label"></span><span class="chev">▾</span></button>
+      </div>
+    </article>
+  `;
 }
 
 async function startPuzzle(slug, puzzle) {

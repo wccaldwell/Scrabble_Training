@@ -545,52 +545,13 @@ form#name-form {
   accent-color: var(--accent);
 }
 
-/* Practice list */
+/* Wider layout for the combined practice + leaderboards page */
 body.practice-page main#app,
-body.practice-page footer,
-body.leaderboards-page main#app,
-body.leaderboards-page footer {
+body.practice-page footer {
   max-width: 1100px;
 }
-.practice-list {
-  list-style: none;
-  padding: 0;
-  margin: 16px 0 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 8px;
-}
-.practice-list li {
-  padding: 12px;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-.practice-list .title-row strong {
-  font-family: var(--font-serif);
-}
-.practice-list .action-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 8px;
-}
-.practice-list .meta {
-  font-size: 13px;
-  color: var(--ink-muted);
-  margin-top: auto;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.practice-list li button {
-  padding: 6px 14px;
-  font-size: 14px;
-}
 
-/* Leaderboards grid */
+/* Practice / leaderboards card grid */
 .boards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -600,13 +561,19 @@ body.leaderboards-page footer {
 .board-card {
   border: 1px solid var(--border);
   border-radius: var(--radius);
+  background: var(--surface);
+  display: flex;
+  flex-direction: column;
 }
-.board-card details { padding: 12px; }
 .board-card summary {
   cursor: pointer;
   list-style: none;
+  padding: 12px 12px 8px;
 }
 .board-card summary::-webkit-details-marker { display: none; }
+.board-card details > summary:hover { background: #fdfbf2; }
+.board-card details[open] > summary { padding-bottom: 4px; }
+.board-card details > .board-table { padding: 0 12px 12px; }
 .board-card-head {
   display: flex;
   justify-content: space-between;
@@ -615,7 +582,7 @@ body.leaderboards-page footer {
   margin-bottom: 6px;
 }
 .board-card-title { font-weight: 600; font-family: var(--font-serif); }
-.board-card-row { font-size: 13px; margin: 2px 0; }
+.board-card-row { font-size: 14px; margin: 3px 0; }
 .board-row-label {
   display: inline-block;
   min-width: 32px;
@@ -624,8 +591,83 @@ body.leaderboards-page footer {
   color: var(--ink-muted);
   letter-spacing: 0.05em;
 }
-.board-card .board-table { margin-top: 10px; }
-.board-card[open] summary { margin-bottom: 4px; }
+
+.board-card-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  border-top: 1px solid var(--border);
+  background: #faf6e9;
+  border-bottom-left-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+  margin-top: auto;
+}
+.board-card .play-btn {
+  padding: 6px 14px;
+  font-size: 14px;
+}
+.board-card .expand-toggle {
+  background: transparent;
+  color: var(--ink-muted);
+  border: none;
+  padding: 4px 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.board-card .expand-toggle:hover {
+  color: var(--accent);
+  filter: none;
+}
+.board-card .expand-toggle .chev {
+  display: inline-block;
+  transition: transform 0.15s ease;
+  font-size: 11px;
+}
+.board-card details[open] ~ .board-card-foot .expand-toggle .chev,
+.board-card details[open] + .board-card-foot .expand-toggle .chev {
+  transform: rotate(180deg);
+}
+.board-card details[open] ~ .board-card-foot .expand-toggle .toggle-label::after,
+.board-card details[open] + .board-card-foot .expand-toggle .toggle-label::after {
+  content: "Hide full leaderboard";
+}
+.board-card details:not([open]) ~ .board-card-foot .expand-toggle .toggle-label::after,
+.board-card details:not([open]) + .board-card-foot .expand-toggle .toggle-label::after {
+  content: "Show full leaderboard";
+}
+.board-card .toggle-label { font-size: 0; }
+.board-card .toggle-label::after { font-size: 13px; }
+
+.pb-badge {
+  display: inline-block;
+  margin-left: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 999px;
+  background: #eef6ec;
+  color: var(--correct);
+  border: 1px solid #cde4cd;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.untried-badge {
+  display: inline-block;
+  margin-left: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 1px 6px;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--ink-muted);
+  border: 1px dashed var(--border);
+}
 
 /* Admin list */
 .admin-list { list-style: none; padding: 0; margin: 12px 0 0; }
