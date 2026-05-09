@@ -596,53 +596,40 @@ body.practice-page footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
-  padding: 10px 12px;
+  gap: 8px;
+  padding: 8px 12px;
   border-top: 1px solid var(--border);
-  background: #faf6e9;
+  background: #efe6c9;
   border-bottom-left-radius: var(--radius);
   border-bottom-right-radius: var(--radius);
   margin-top: auto;
 }
 .board-card .play-btn {
-  padding: 6px 14px;
-  font-size: 14px;
+  padding: 5px 12px;
+  font-size: 13px;
+  border-radius: 4px;
 }
 .board-card .expand-toggle {
   background: transparent;
   color: var(--ink-muted);
   border: none;
-  padding: 4px 6px;
+  padding: 4px 4px;
   font-size: 13px;
   font-weight: 600;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 4px;
 }
-.board-card .expand-toggle:hover {
-  color: var(--accent);
-  filter: none;
-}
+.board-card .expand-toggle:hover { color: var(--accent); filter: none; }
 .board-card .expand-toggle .chev {
   display: inline-block;
   transition: transform 0.15s ease;
   font-size: 11px;
 }
-.board-card details[open] ~ .board-card-foot .expand-toggle .chev,
 .board-card details[open] + .board-card-foot .expand-toggle .chev {
   transform: rotate(180deg);
 }
-.board-card details[open] ~ .board-card-foot .expand-toggle .toggle-label::after,
-.board-card details[open] + .board-card-foot .expand-toggle .toggle-label::after {
-  content: "Hide full leaderboard";
-}
-.board-card details:not([open]) ~ .board-card-foot .expand-toggle .toggle-label::after,
-.board-card details:not([open]) + .board-card-foot .expand-toggle .toggle-label::after {
-  content: "Show full leaderboard";
-}
-.board-card .toggle-label { font-size: 0; }
-.board-card .toggle-label::after { font-size: 13px; }
 
 .pb-badge {
   display: inline-block;

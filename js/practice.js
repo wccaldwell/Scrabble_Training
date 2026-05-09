@@ -87,11 +87,13 @@ function drawList(perm) {
     const playBtn = card.querySelector(".play-btn");
 
     if (details && toggleBtn) {
+      const labelEl = toggleBtn.querySelector(".toggle-label");
       toggleBtn.addEventListener("click", e => {
         e.preventDefault();
         details.open = !details.open;
       });
       details.addEventListener("toggle", () => {
+        if (labelEl) labelEl.textContent = details.open ? "Hide leaderboard" : "Show leaderboard";
         if (!details.open) return;
         const tableEl = details.querySelector(".board-table");
         if (tableEl.dataset.loaded === "1") return;
@@ -153,7 +155,7 @@ function buildCard(slug, puzzle, rows, you, youKey) {
       </details>
       <div class="board-card-foot">
         <button class="play-btn" type="button">${playLabel}</button>
-        <button class="expand-toggle" type="button"><span class="toggle-label"></span><span class="chev">▾</span></button>
+        <button class="expand-toggle" type="button"><span class="toggle-label">Show leaderboard</span><span class="chev" aria-hidden="true">▾</span></button>
       </div>
     </article>
   `;
