@@ -61,9 +61,12 @@ function drawList(perm) {
   const activeType = $("#type-filter").querySelector(".filter-pill.active")?.dataset.type || "all";
   const unattemptedOnly = $("#unattempted-only").checked;
 
+  const you = getName();
+  const youKey = you ? you.trim().toLowerCase() : "";
+
   const filtered = entries.filter(([slug, p]) => {
     if (activeType !== "all" && p.type !== activeType) return false;
-    if (unattemptedOnly && getPersonalBest(`permanent:${slug}`)) return false;
+    if (unattemptedOnly && hasAttempted(slug, youKey)) return false;
     return true;
   });
 
@@ -74,9 +77,6 @@ function drawList(perm) {
     return;
   }
   empty.classList.add("hidden");
-
-  const you = getName();
-  const youKey = you ? you.trim().toLowerCase() : "";
 
   body.innerHTML = filtered.map(([slug, p]) => buildCard(slug, p, cachedRows, you, youKey)).join("");
 
@@ -108,6 +108,13 @@ function drawList(perm) {
       });
     }
   });
+}
+
+function hasAttempted(slug, youKey) {
+  if (getPersonalBest(`permanent:${slug}`)) return true;
+  if (!youKey || !cachedRows) return false;
+  const ranked = rankPermanentBestPerPlayer(cachedRows, `permanent:${slug}`);
+  return ranked.some(r => r.name.trim().toLowerCase() === youKey);
 }
 
 function buildCard(slug, puzzle, rows, you, youKey) {
