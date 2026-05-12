@@ -94,7 +94,9 @@ export function runAnagramGame(root, week) {
           <div class="found-list">${foundHtml}</div>
           <div class="game-actions">
             <button type="button" class="secondary" id="skip-btn">Skip</button>
-            <button type="button" id="giveup-btn">Give Up</button>
+          </div>
+          <div class="giveup-row">
+            <button type="button" class="link-button" id="giveup-btn">Give up</button>
           </div>
         </div>
       `;

@@ -81,8 +81,8 @@ export function runRecallGame(root, week) {
             </div>
           </div>
           <div class="slot-grid" id="slot-grid">${slotsHtml}</div>
-          <div class="game-actions">
-            <button type="button" id="giveup-btn">Give Up</button>
+          <div class="giveup-row">
+            <button type="button" class="link-button" id="giveup-btn">Give up</button>
           </div>
         </div>
       `;

@@ -106,7 +106,9 @@ export function runHooksGame(root, week) {
               ? `<button type="button" id="next-btn">${anyPending() ? "Next word" : "Finish"}</button>`
               : `<button type="button" id="submit-btn">Submit</button>`}
             <button type="button" class="secondary" id="skip-btn" ${p.submitted ? "disabled" : ""}>Skip</button>
-            <button type="button" id="giveup-btn">Give Up</button>
+          </div>
+          <div class="giveup-row">
+            <button type="button" class="link-button" id="giveup-btn">Give up</button>
           </div>
         </div>
       `;

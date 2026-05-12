@@ -266,7 +266,7 @@ form#name-form {
   }
   .recall-card .game-status,
   .recall-card .recall-input-wrap,
-  .recall-card .game-actions { flex: 0 0 auto; }
+  .recall-card .giveup-row { flex: 0 0 auto; }
   .recall-card .slot-grid {
     flex: 1 1 0;
     min-height: 0;
@@ -287,6 +287,12 @@ form#name-form {
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 12px;
+}
+
+.giveup-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
 }
 
 .found-list {
